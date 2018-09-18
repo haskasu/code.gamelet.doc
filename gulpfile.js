@@ -14,8 +14,8 @@ var minify = require('gulp-minify');
 
 let serverJson = JSON.parse(fs.readFileSync("server.json", "utf8"));
 let locales = [
-    {code: 'en', label: 'English'},
-    {code: 'zh', label: '繁體中文'},
+    { code: 'en', label: 'English' },
+    { code: 'zh', label: '繁體中文' },
 ];
 
 function initLocalEnv() {
@@ -47,10 +47,11 @@ function cleanFolder(paths) {
             });
     })
 }
-function replaceContent(path, file, search, replaceString) {
+function replaceContent(path, file, destFile, search, replaceString) {
     return new Promise((resolve, reject) => {
         gulp.src(path + file, { base: path })
             .pipe(replace(search, replaceString))
+            .pipe(rename(destFile))
             .pipe(gulp.dest(path))
             .on('end', () => {
                 resolve();
@@ -82,6 +83,27 @@ function buildIntl(cb) {
     execute('sphinx-intl', ['build'], cb);
 }
 
+function replaceConfigTranslates(translates, locale) {
+    if (!translates) {
+        let translateJson = JSON.parse(fs.readFileSync("source/conf.translate.json", "utf8"));
+        translates = [];
+        for (let key in translateJson) {
+            let value = translateJson[key][locale.code];
+            translates.push({
+                search: '%' + key + '%',
+                replaceValue: value
+            })
+        }
+    }
+
+    if (translates.length) {
+        let trans = translates.shift();
+        return replaceContent('./source/', 'conf.py', 'conf.py', new RegExp(trans.search, "g"), trans.replaceValue)
+            .then(() => replaceConfigTranslates(translates, locale));
+    }
+    return Promise.resolve();
+}
+
 function buildAll() {
     return new Promise((resolve, reject) => {
         buildLocales(locales.slice(), (err) => {
@@ -98,11 +120,11 @@ function buildAll() {
 function buildLocales(_locales, cb) {
     if (_locales.length) {
         let locale = _locales.shift();
-        let html_context = JSON.stringify({languages: locales});
         cleanFolder(['build/html', 'docs/' + locale.code])
-            .then(() => replaceContent('./source/', 'conf.py', /^language\s*=\s*\'.*\'/m, `language = '${locale.code}'`))
-            .then(() => replaceContent('./source/', 'conf.py', /^html_context\s*=.*$/m, `html_context = ${html_context}`))
-            .then(() => replaceContent('./source/_templates/', 'header.html', /\<span class=\"language-label\"\>.*\<\/span\>/, `<span class="language-label">${locale.label}</span>`))
+            .then(() => replaceContent('./source/', 'conf.template.py', 'conf.py', /%language%/g, locale.code))
+            .then(() => replaceContent('./source/', 'conf.py', 'conf.py', /%languages%/g, JSON.stringify(locales)))
+            .then(() => replaceContent('./source/', 'conf.py', 'conf.py', /%currentLanguageName%/g, locale.label))
+            .then(() => replaceConfigTranslates(null, locale))
             .then(() => {
                 execute('make', ['-e', `SPHINXOPTS="-D language='${locale.code}'"`, 'html'], err => {
                     if (err) {

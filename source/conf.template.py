@@ -59,10 +59,10 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'zh'
+language = '%language%'
 html_context = {
-    "currentLanguageName": "繁體中文",
-    "languages": [{"code":"en","label":"English"},{"code":"zh","label":"繁體中文"}]
+    "currentLanguageName": "%currentLanguageName%",
+    "languages": %languages%
 }
 
 locale_dirs = ['locale/']
@@ -90,8 +90,8 @@ html_theme = 'sphinx_materialdesign_theme'
 #
 html_theme_options = {
     'header_links': [
-        ('首頁', 'index', False, 'home'),
-        ('來去寫遊戲', 'https://code.gamelet.com/profile', True, 'launch')
+        ('%Home%', 'index', False, 'home'),
+        ('%Start Coding on CG%', 'https://code.gamelet.com/profile', True, 'launch')
     ],
     # Customize css colors.
     # For details see link.
