@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Code.Gamelet Doc</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var supported = ['en', 'zh']
+        function getLanguage(lang) {
+            for (var i = 0; i < supported.length; ++i) {
+                if (lang.indexOf(supported[i]) == 0) {
+                    return supported[i]
+                }
+            }
+            return null;
+        }
+        var language;
+        if (navigator.languages) {
+            for (var i = 0; i < navigator.languages.length; ++i) {
+                var lang = getLanguage(navigator.languages[i]);
+                lang && (language = lang);
+            }
+        }
+
+        language = language ||
+            getLanguage(navigator.language) ||
+            getLanguage(navigator.browserLanguage) ||
+            getLanguage(navigator.systemLanguage) ||
+            getLanguage(navigator.userLanguage) ||
+            supported[0];
+
+        window.location.replace(language + '/index.html');
+    </script>
+</body>
+
+</html>

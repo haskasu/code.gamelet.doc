@@ -1,0 +1,31 @@
+{
+  "name": "code.gamelet.doc",
+  "version": "1.0.0",
+  "description": "Source of the Documentation of Code.Gamelet.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haskasu/code.gamelet.doc.git"
+  },
+  "author": "Haskasu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haskasu/code.gamelet.doc/issues"
+  },
+  "homepage": "https://github.com/haskasu/code.gamelet.doc#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-minify": "^3.0.2",
+    "gulp-prompt": "^1.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-util": "^3.0.8",
+    "vinyl-ftp": "^0.6.1"
+  }
+}

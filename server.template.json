@@ -1,0 +1,5 @@
+{
+    "host": "server.domain",
+    "user": "ftp.username",
+    "password": "ftp.password"
+}
