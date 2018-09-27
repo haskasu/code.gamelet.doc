@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>Intro &#8212; Code.Gamelet Doc  文档</title>
+    <title>平台介紹 &#8212; Code.Gamelet Doc  文档</title>
 
     <link rel="stylesheet" href="_static/material-icons.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/cg.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/notosanscjkjp.css" />
     <link rel="stylesheet" type="text/css" href="_static/roboto.css" />
     <link rel="stylesheet" type="text/css" href="_static/material-design-lite-1.3.0/material.indigo-pink.min.css" />
@@ -25,15 +25,15 @@
     <script type="text/javascript" src="_static/sphinx_materialdesign_theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Get Started" href="get-started.html" />
-    <link rel="prev" title="Welcome to CG Doc!" href="index.html" /> 
+    <link rel="next" title="快速入門" href="get-started.html" />
+    <link rel="prev" title="觀迎使用CG的教學文件" href="index.html" /> 
   </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
     <div class="mdl-layout__header-row">
         
         <nav class="mdl-navigation breadcrumb">
-            <a class="mdl-navigation__link is-active">Intro</a>
+            <a class="mdl-navigation__link is-active">平台介紹</a>
         </nav>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
@@ -44,7 +44,7 @@
             <i class="material-icons">search</i>
         </label>
         <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="q"  id="waterfall-exp" placeholder="Search" />
+          <input class="mdl-textfield__input" type="text" name="q"  id="waterfall-exp" placeholder="搜索" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
         </div>
@@ -53,15 +53,6 @@
       快速搜索
       </div>
 </form>
-        
-<a id="button-show-source"
-    class="mdl-button mdl-js-button mdl-button--icon"
-    href="_sources/intro.rst.txt" rel="nofollow">
-<i class="material-icons">code</i>
-</a>
-<div class="mdl-tooltip" data-mdl-for="button-show-source">
-显示源代码
-</div>
         </nav>
     </div>
     <div class="mdl-layout__header-row header-links">
@@ -101,14 +92,19 @@
     
     
       <div class="globaltoc">
-        <span class="mdl-layout-title toc">Table Of Contents</span>
+        <span class="mdl-layout-title toc">內容目錄</span>
         
         
             
             <nav class="mdl-navigation">
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get-started.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">平台介紹</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started.html">快速入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">示範教學</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/cgevents/index.html">CG同人陣製作示範教學</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/coding/index.html">寫程式做遊戲示範教學</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -130,14 +126,19 @@
     
     
       <div class="globaltoc">
-        <span class="mdl-layout-title toc">Table Of Contents</span>
+        <span class="mdl-layout-title toc">內容目錄</span>
         
         
             
             <nav class="mdl-navigation">
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get-started.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">平台介紹</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started.html">快速入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">示範教學</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/cgevents/index.html">CG同人陣製作示範教學</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/coding/index.html">寫程式做遊戲示範教學</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -149,15 +150,58 @@
     <div class="document">
         <div class="page-content">
         
-  <div class="section" id="intro">
-<h1>Intro<a class="headerlink" href="#intro" title="永久链接至标题">¶</a></h1>
-<p>some text for intro</p>
+  <div class="section" id="id1">
+<h1>平台介紹<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>Code.Gamelet.com (簡稱CG)，是個幫助充滿遊戲點子的夢想家實現夢想的遊戲製作平台。</p>
+<p>遊戲設計師可以使用內建的遊戲事件編輯器，按按滑鼠、填填數字就能製作遊戲。圖案、音效、動畫都可和其他製作者分享使用，即使一個人也能宛如身在一個遊戲製作團隊。</p>
+<p>程式設計師可以在CG平台上撰寫程式，可以從零開始也可以複製別人分享的專案改寫。可以寫遊戲、可以寫APP、也可以寫函式庫供別的專業共同使用，
+甚至可以擴充CG的遊戲事件編輯器，這麼多強大的功能，都只要在CG網站上就能做到，完全無需下載安裝任何軟體，也不用經歷各種可怕的系統環境設定。</p>
+<div class="section" id="id2">
+<h2>適用對象<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li>想製作遊戲，但只有點子不知道從何下手的人</li>
+<li>想學寫程式，但拿不定主意要學什麼語言的人</li>
+<li>想要用最快速度將剛想到的點子變成遊戲的人</li>
+<li>已經會寫程式，但很想觀摩大師以求精進的人</li>
+<li>小學、中學、大學生、有空想開拓新領域的人</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>特色與好處<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li>CG內建的事件編輯器，不需看到一行程式碼就能輕鬆製作遊戲</li>
+<li>圖案、音效、動畫、甚至程式碼都能分享使用</li>
+<li>完整強大的線上程式編輯器(Typescript IDE)</li>
+<li>遊戲成品可選擇直接發佈在CG平台上</li>
+<li>遊戲成品也可以匯出至個人網站或Android等手機應用程式</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>技能需求與學習<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>不想寫程式的使用者，在CG所需要的技能只有一般網頁所需的基本滑鼠和鍵盤操作。</p>
+<p>想寫程式的使用者，必須學習 <cite>Typescript &lt;https://www.typescriptlang.org/&gt;</cite> ，
+同學們可以在這份文件中找到一系列在CG平台上學習 Typescript 的教學影片。</p>
+</div>
 </div>
 
 
         </div>
         <div class="side-doc-outline">
             <div class="side-doc-outline--content"> 
+<div class="localtoc">
+    <p class="caption">
+      <span class="caption-text">內容目錄</span>
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">平台介紹</a><ul>
+<li><a class="reference internal" href="#id2">適用對象</a></li>
+<li><a class="reference internal" href="#id3">特色與好處</a></li>
+<li><a class="reference internal" href="#id4">技能需求與學習</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
             </div>
         </div>
 
@@ -167,14 +211,14 @@
          <i class="pagenation-arrow-L material-icons">arrow_back</i>
          <div class="pagenation-text">
             <span class="pagenation-direction">Previous</span>
-            <div>Welcome to CG Doc!</div>
+            <div>觀迎使用CG的教學文件</div>
          </div>
      </a>
      <a id="button-next" href="get-started.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
         <i class="pagenation-arrow-R material-icons">arrow_forward</i>
         <div class="pagenation-text">
             <span class="pagenation-direction">Next</span>
-            <div>Get Started</div>
+            <div>快速入門</div>
         </div>
      </a>
   </div>
@@ -184,8 +228,9 @@
       <div>
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get-started.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">平台介紹</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started.html">快速入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">示範教學</a></li>
 </ul>
 
       </div>

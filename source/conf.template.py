@@ -67,6 +67,7 @@ html_context = {
 
 locale_dirs = ['locale/']
 gettext_compact = False
+gettext_additional_targets = ['image']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -140,7 +141,7 @@ html_static_path = ['_static']
 
 # -- Options for HTMLHelp output ---------------------------------------------
 def setup(app):
-    app.add_stylesheet('css/custom.css')
+    app.add_css_file('css/cg.min.css')
     
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'CGDocdoc'
@@ -196,5 +197,7 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# -- include global rst in every rst -----------------------------------------
+rst_prolog = open('global.rst', 'r').read()
 
 # -- Extension configuration -------------------------------------------------

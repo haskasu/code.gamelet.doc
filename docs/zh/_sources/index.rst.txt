@@ -1,20 +1,18 @@
-.. CG Doc documentation master file, created by
-   sphinx-quickstart on Thu Sep  6 16:19:06 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+觀迎使用CG的教學文件
+=====================
+Code.Gamelet.com (簡稱CG)，是個適合各種程度的夢想家製作遊戲的平台。
 
-Welcome to CG Doc!
-==================================
+* CG的摳的功能，可以將別人分享的圖案、音效、動畫、甚至程式碼摳到自己的專案使用，即使只有一個人也可以製作專業的遊戲。
+* CG的事件編輯器，可以在不碰一行程式碼的條件下完成專業的遊戲製作。
+
+同學們可以在這份CG的教學文件中，找到囊括上述功能的各項教學，並學會製作遊戲的一身功夫。
+
+文件目錄
++++++++++
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   intro
-   get-started
-
-alsdfkjsdf
-
-Contents
-========
-
-this is the content
+    intro
+    get-started
+    tutorials/index
