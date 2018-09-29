@@ -1,6 +1,8 @@
 # code.gamelet.doc
 Source of the Documentation of Code.Gamelet.com
 
+https://haskasu.github.io/code.gamelet.doc
+
 ## Install
 https://dont-be-afraid-to-commit.readthedocs.io/en/latest/documentation.html
 
