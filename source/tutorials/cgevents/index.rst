@@ -28,3 +28,16 @@ CG同人陣是一套以遊戲事件為設計單位的遊戲製作方式，不用
 .. image:: img/image19.png
 
 太好了
+
+.. toctree::
+    :maxdepth: 1
+
+    create-project
+    events-editor
+    add-first-event
+    add-resource
+    open-layout-editor
+
+
+
+

@@ -32,3 +32,21 @@ dl.docutils dd {
 .fullwidth {
     max-width: 100%;
 }
+
+/* topic directive */
+div.topic {
+    margin: 0 0 1em 2em;
+    border: 1px solid lightblue;
+    background: lightcyan;
+    padding: 12px 15px;
+    border-radius: 5px;
+}
+div.topic > p {
+    margin: 0.7em 0 0 0;
+    color: rgba(0,0,0,0.75);
+}
+
+div.topic > p.topic-title {
+    margin: 0;
+    color: darkolivegreen;
+}
