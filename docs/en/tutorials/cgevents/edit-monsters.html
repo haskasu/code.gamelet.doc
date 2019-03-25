@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>讓怪獸動起來 &#8212; Code.Gamelet Doc  documentation</title>
+
+    <link rel="stylesheet" href="../../_static/material-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/cg.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/notosanscjkjp.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/roboto.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/material-design-lite-1.3.0/material.indigo-pink.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_materialdesign_theme.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/cg.min.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx_materialdesign_theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="發射飛彈" href="edit-bullets.html" />
+    <link rel="prev" title="編輯事件表" href="edit-events.html" /> 
+  </head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
+    <div class="mdl-layout__header-row">
+        
+        <nav class="mdl-navigation breadcrumb">
+            <a class="mdl-navigation__link" href="../index.html">示範教學</a><i class="material-icons">navigate_next</i>
+            <a class="mdl-navigation__link" href="index.html">CG同人陣製作示範教學</a><i class="material-icons">navigate_next</i>
+            <a class="mdl-navigation__link is-active">讓怪獸動起來</a>
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+        
+<form class="form-inline pull-sm-right" action="../../search.html" method="get">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+        <label id="quick-search-icon" class="mdl-button mdl-js-button mdl-button--icon"  for="waterfall-exp">
+            <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="q"  id="waterfall-exp" placeholder="Search" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </div>
+      </div>
+      <div class="mdl-tooltip" data-mdl-for="quick-search-icon">
+      Quick search
+      </div>
+</form>
+        </nav>
+    </div>
+    <div class="mdl-layout__header-row header-links">
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+          <a  class="mdl-navigation__link" href="../../index.html">
+                  <i class="material-icons navigation-link-icon">home</i>
+                  Home
+              </a>
+          
+              <a  class="mdl-navigation__link" href="https://code.gamelet.com/profile">
+                  <i class="material-icons navigation-link-icon">launch</i>
+                  Start Coding on CG
+              </a>
+            <!--language-->
+            <button id="button-languages" class="mdl-button mdl-js-button">
+                English
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect menu-languages" for="button-languages">
+                <li class="mdl-menu__item"><a href="../../../en/index.html">English</a></li>
+                <li class="mdl-menu__item"><a href="../../../zh/index.html">繁體中文</a></li>
+            </ul>
+      </nav>
+    </div>
+</header><header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../index.html">
+              <span class="title-text">
+                  Code.Gamelet Doc
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">平台介紹</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started.html">快速入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">示範教學</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CG同人陣製作示範教學</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="edit-events.html">編輯事件表</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">讓怪獸動起來</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit-bullets.html">發射飛彈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publish-build.html">發佈遊戲成品</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../coding/index.html">寫程式做遊戲示範教學</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+        <main class="mdl-layout__content" tabIndex="0">
+<header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../index.html">
+              <span class="title-text">
+                  Code.Gamelet Doc
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">平台介紹</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started.html">快速入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">示範教學</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CG同人陣製作示範教學</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="edit-events.html">編輯事件表</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">讓怪獸動起來</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit-bullets.html">發射飛彈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publish-build.html">發佈遊戲成品</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../coding/index.html">寫程式做遊戲示範教學</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+
+    <div class="document">
+        <div class="page-content">
+        
+  <div class="section" id="tutorials-cgevents-edit-monsters">
+<span id="id1"></span><h1>讓怪獸動起來<a class="headerlink" href="#tutorials-cgevents-edit-monsters" title="Permalink to this headline">¶</a></h1>
+<p>這一節，我們將會新增三個新的事件:</p>
+<ol class="arabic simple">
+<li>怪物飛行: 讓怪獸動起來。</li>
+<li>怪物撞戰機: 檢查怪獸碰到戰機時，讓戰機爆炸，並結束遊戲。</li>
+<li>重新一次: 讓玩家在遊戲結束後可以選擇再玩一次。</li>
+</ol>
+<div class="section" id="id2">
+<h2>怪物飛行<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>新增一個事件ID為 怪物飛行 的事件，並設定為 <strong>無限重覆</strong> 。我們將在這個事件中加入一個檢查以及一個動作，用來控制怪獸們的飛行。</p>
+<div class="section" id="for-each">
+<h3>(檢查) For Each<a class="headerlink" href="#for-each" title="Permalink to this headline">¶</a></h3>
+<p>接著我們要加入一個檢查，但這是個特殊的檢查， <strong>迴圈</strong> 。</p>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 什麼是 <strong>迴圈</strong> 檢查</p>
+<p>迴圈(Loop)在電腦的世界中是非常重要的存在，它可以讓同樣一組動作，重覆執行很多次。</p>
+<p>CG同人陣中的迴圈，可以讓一個事件中的所有動作重覆執行很多次。請注意，這裏所說的重覆和事件的重覆次數是不同的，事件的重覆是指每一小段時間會重覆執行一次，
+而迴圈中的重覆則是瞬間將事件中的動作重覆執行很多次。</p>
+</div>
+<p>在 怪物飛行 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>迴圈</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>For Each</strong> 。
+我們要在這個For Each中找到所有名字(ID)以 monster 作為開頭的物件，並對這些物件都執行一個 <strong>更新顯示物件</strong> 的動作，讓所有的怪獸都持續朝玩家的戰機方向前進。</p>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> For Each</p>
+<p>For Each是迴圈的一種，它可以在遊戲中找出名稱類似的所有物件，並對個別物件都執行事件中的所有動作。</p>
+</div>
+<p>在 For Each 的編輯視窗中，輸入下列資料:</p>
+<ul class="simple">
+<li>區域變數名稱: <strong>instance</strong></li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 區域變數名稱</p>
+<p>因為在迴圈中可能找到許多怪獸，在之後 <strong>更新顯示物件</strong> 的動作中，我們卻沒有辦法預先知道怪獸的名字，因此就有了 <strong>區域變數名稱</strong> 來幫我們解決這個問題。</p>
+<p>在這個迴圈中，我們將找到 monster0, monster1, monster2, monster3四個怪獸，並輪流對他們動作。</p>
+<p>在輪到 monster0 的時候，我們會幫這隻怪獸取一個暫時的小名叫 instance，在 <strong>更新顯示物件</strong> 的動作中，我們只要把物件的ID設定為 instance 就可以控制 monster0 的位置、角度等屬性。</p>
+<p>輪到 monster1 的時候，一樣幫他取小名 instance ，在 <strong>更新顯示物件</strong> 的動作中，一樣針對 instance 做動作就可以。以此類推。</p>
+</div>
+<ul class="simple">
+<li>用來搜尋物件的ID: <strong>monster*</strong></li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 星號搜尋</p>
+<p>使用 * (星號)來搜尋名字相似的所有物件，是個很方便的技巧，以 monster* 搜尋物件時，只要開頭是以 monster 為首的物件都會被選進來，當然就包括了這個教學中的 monster0, monster1, monster2, monster3 。</p>
+</div>
+<img alt="tutorials\cgevents\img/check_foreach_monsters.png" class="fullwidth" src="tutorials\cgevents\img/check_foreach_monsters.png" />
+</div>
+<div class="section" id="id3">
+<h3>(動作) 更新顯示物件<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>在 怪物飛行 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> ，
+如同上一節讓戰機飛行的方式一樣，輸入下列資料讓怪獸飛行。</p>
+<ul class="simple">
+<li>物件的ID: <strong>instance</strong></li>
+<li>勾選 <strong>設定位置</strong> ，設定方式選擇 <strong>朝一個方向移動</strong> ，距離填入 <strong>1</strong></li>
+<li>勾選 <strong>設定旋轉角度</strong> ，設定方式選擇 <strong>轉向一個顯示物件</strong> ，目標物件 <strong>fighter0</strong> ，旋轉率 <strong>0.01</strong></li>
+<li>點擊視窗左上角的綠色勾勾完成</li>
+</ul>
+<div class="collapse topic">
+<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 參考截圖</p>
+<img alt="tutorials\cgevents\img/update_monster.png" class="fullwidth" src="tutorials\cgevents\img/update_monster.png" />
+</div>
+<p>完成這個事件後，可以試玩一下，看看怪獸們是不是都朝著玩家的戰機飛來。不過此時即使怪獸撞上戰機也不會有任何事情發生，因為下一個事件，我們就要讓怪獸有能力把戰機撞爆。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>怪物撞戰機<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>新增一個事件ID為 怪物撞戰機 的事件，這個事件不需要重覆(重覆次數0)，因為這個事件發生後，遊戲就需要結束。</p>
+<p>我們將在這個事件中加入一個 <strong>迴圈</strong> 檢查、一個 <strong>物件重疊</strong> 檢查，用來測試是否有其中一隻怪獸和戰機的位置重疊。
+接著還會加入五個動作，在確認其中一隻怪獸和戰機位置重疊(碰撞)後，我們要從舞台上移除戰機並加入爆炸的特效。</p>
+<div class="section" id="id5">
+<h3>(檢查) For Each<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>在 怪物撞戰機 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>迴圈</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>For Each</strong> 。</p>
+<ul class="simple">
+<li>區域變數名稱: <strong>instance</strong></li>
+<li>用來搜尋物件的ID: <strong>monster*</strong></li>
+<li>最多動作觸發次數: <strong>1</strong></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>(檢查) 物件重疊<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>在 怪物撞戰機 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>物件重疊</strong> 。</p>
+<ul class="simple">
+<li>顯示物件的ID: <strong>instance</strong></li>
+<li>顯示物件的ID: <strong>fighter0</strong></li>
+<li>檢查方式: <strong>距離</strong></li>
+<li>距離: <strong>60</strong></li>
+</ul>
+<p>以上設定可以在迴圈中檢查被暫時取名為 instance 的怪獸和 fighter0 (戰機)的距離是不是小於 60 (像素)，如果距離小於60就通過檢查，也就是發生怪獸撞戰機的情況了。</p>
+<div class="collapse topic">
+<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 參考截圖</p>
+<img alt="tutorials\cgevents\img/check_monster_fighter_distance.png" class="fullwidth" src="tutorials\cgevents\img/check_monster_fighter_distance.png" />
+</div>
+</div>
+<div class="section" id="id7">
+<h3>(動作) 建立圖層佈局<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>新增</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>建立圖層佈局</strong> ，
+用來加入爆炸的特效。</p>
+<ul class="simple">
+<li>父節點的物件ID: <strong>gameroot</strong></li>
+<li>圖片佈局<ol class="arabic">
+<li>將 explosion 這個資源拉進舞台</li>
+<li>將explosion的轉軸設到中心位置 x: -35 , y: -27</li>
+<li>勾選動畫的 <strong>播放</strong> 與 <strong>自動移除</strong></li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>(動作) 更新顯示物件<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>剛剛加入的爆炸特效要移動到戰機的位置。
+在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> 。</p>
+<ul class="simple">
+<li>物件的ID: <strong>explosion0</strong></li>
+<li>勾選 <strong>設定位置</strong> ，設定方式選擇 <strong>設定在一個顯示物件上</strong> ，目標物件 <strong>fighter0</strong></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>(動作) 移除物件<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>將戰機從舞台上移除。
+在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>移除</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>移除物件</strong> 。</p>
+<ul class="simple">
+<li>物件ID: <strong>fighter0</strong></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>(動作) 等待<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>在接下來的動作之前，先等待一秒。
+在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>系統</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>等待</strong> 。</p>
+<ul class="simple">
+<li>時間: <strong>1000</strong> 毫秒</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>(動作) 彈出確認視窗<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>彈出顯示遊戲結束的視窗。
+在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>彈出確認視窗</strong> 。</p>
+<ul class="simple">
+<li>彈出視窗的ID: <strong>gameover</strong></li>
+<li>標題: <strong>Game Over</strong></li>
+<li>勾選 <strong>隱藏取消按鈕</strong></li>
+<li>確認按鈕文字: <strong>再一次</strong></li>
+</ul>
+<p>如此，這個事件就完成了，怪獸們會追著玩家，若被怪獸撞擊，戰機就會爆炸消失，並彈出一個有「再一次」按鈕的視窗。至於玩家按下「再一次」按鈕後會發生什麼，就是下一個事件要管的事了。</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>重新一次<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>新增一個事件ID為 重新一次 的事件，這個事件不需要重覆(重覆次數0)。</p>
+<p>這個事件中會包含兩個 <strong>觸發</strong> ，用來監聽遊戲結束視窗中的「再一次」按鈕被玩家按下去的時機。觸發後不需要檢查，會執行一個動作，讓系統重新執行一次 game.events 這個事件表。</p>
+<div class="section" id="id13">
+<h3>(觸發) 視窗關閉<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>監聽遊戲結束時彈出的視窗被玩家關閉的時機。
+在 重新一次 事件中按下 <strong>觸發</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增觸發的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>視窗關閉</strong> 。</p>
+<ul class="simple">
+<li>彈出視窗的ID: <strong>gameover</strong></li>
+<li>關閉方式: <strong>都可以</strong></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>(觸發) 視窗關閉<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>前一個觸發是檢查玩家被怪獸撞爆時彈出的結束視窗。雖然還沒寫到後面的事件，但我們也需要監聽任務完成彈出的視窗被關閉的時機。
+在 重新一次 事件中按下 <strong>觸發</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增觸發的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>視窗關閉</strong> 。</p>
+<ul class="simple">
+<li>彈出視窗的ID: <strong>gameclear</strong></li>
+<li>關閉方式: <strong>都可以</strong></li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 一個事件有兩個觸發</p>
+<p>一個事件如果含有兩個或更多的觸發時，任何一個觸發發動都會讓事件醒來進行檢查與動作。</p>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>(動作) 執行事件表<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>在 重新一次 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>系統</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>視執行事件表</strong> 。</p>
+<ul class="simple">
+<li>檔案(.event): <strong>CG.SpaceShooter_zh/game.events</strong></li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">priority_high</span> 注意</p>
+<p>檔案所在目錄會依專案代碼所有不同，範例中因為專案代碼是 SpaceShooter_zh ，所以 game.events 是放在 CG.SpaceShooter_zh 這個目錄裏。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>下一步<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>到此為止，我們已經完成遊戲的一半了，接下來就要讓玩家的戰機裝上飛彈，和怪獸一決雌雄了。</p>
+<div class="collapse topic">
+<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 到此為止的事件參考截圖</p>
+<img alt="tutorials\cgevents\img/events_half_done.png" class="fullwidth" src="tutorials\cgevents\img/events_half_done.png" />
+</div>
+<p><a class="reference internal" href="edit-bullets.html#tutorials-cgevents-edit-bullets"><span class="std std-ref">發射飛彈</span></a></p>
+</div>
+</div>
+
+
+        </div>
+        <div class="side-doc-outline">
+            <div class="side-doc-outline--content"> 
+<div class="localtoc">
+    <p class="caption">
+      <span class="caption-text">Table Of Contents</span>
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">讓怪獸動起來</a><ul>
+<li><a class="reference internal" href="#id2">怪物飛行</a><ul>
+<li><a class="reference internal" href="#for-each">(檢查) For Each</a></li>
+<li><a class="reference internal" href="#id3">(動作) 更新顯示物件</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">怪物撞戰機</a><ul>
+<li><a class="reference internal" href="#id5">(檢查) For Each</a></li>
+<li><a class="reference internal" href="#id6">(檢查) 物件重疊</a></li>
+<li><a class="reference internal" href="#id7">(動作) 建立圖層佈局</a></li>
+<li><a class="reference internal" href="#id8">(動作) 更新顯示物件</a></li>
+<li><a class="reference internal" href="#id9">(動作) 移除物件</a></li>
+<li><a class="reference internal" href="#id10">(動作) 等待</a></li>
+<li><a class="reference internal" href="#id11">(動作) 彈出確認視窗</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">重新一次</a><ul>
+<li><a class="reference internal" href="#id13">(觸發) 視窗關閉</a></li>
+<li><a class="reference internal" href="#id14">(觸發) 視窗關閉</a></li>
+<li><a class="reference internal" href="#id15">(動作) 執行事件表</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">下一步</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+            </div>
+        </div>
+
+      <div class="clearer"></div>
+    </div><div class="pagenation">
+     <a id="button-prev" href="edit-events.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="P">
+         <i class="pagenation-arrow-L material-icons">arrow_back</i>
+         <div class="pagenation-text">
+            <span class="pagenation-direction">Previous</span>
+            <div>編輯事件表</div>
+         </div>
+     </a>
+     <a id="button-next" href="edit-bullets.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
+        <i class="pagenation-arrow-R material-icons">arrow_forward</i>
+        <div class="pagenation-text">
+            <span class="pagenation-direction">Next</span>
+            <div>發射飛彈</div>
+        </div>
+     </a>
+  </div>
+        <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">Code.Gamelet Doc</div>
+      <div>
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">平台介紹</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started.html">快速入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">示範教學</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <div class="mdl-mini-footer__right-section">
+        <div>&copy; Copyright 2018, Code.Gamelet.com.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.2 using <a href="https://github.com/myyasuda/sphinx_materialdesign_theme">sphinx_materialdesign_theme</a>.</div>
+    </div>
+</footer>
+        </main>
+    </div>
+  </body>
+</html>

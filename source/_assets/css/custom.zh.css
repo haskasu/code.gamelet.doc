@@ -3,14 +3,21 @@
 body, a.download>code.download, blockquote, h1, h2, h3, h4, h5, h6, span.mdl-layout-title {
     font-family: Roboto, 'Noto Sans Kannada', sans-serif !important;
 }
-
-.page-content, .page-content dd, .page-content dl, .page-content dt, .page-content ol, .page-content p, .page-content table, .page-content td, .page-content th, .page-content ul {
-    font-size: 16px !important;
-}
-
-.globaltoc ul li .link-wrapper>a {
+html {
     font-size: 15px !important;
 }
+
+.page-content h2 {
+	font-size: 1.66rem !important;
+	line-height: 2rem !important;
+	padding-top: 3rem !important;
+}
+.page-content h3 {
+	font-size: 1.35rem !important;
+	line-height: 1.5rem !important;
+	padding-top: 2rem !important;
+}
+
 .globaltoc ul li .link-wrapper>a.current {
     font-weight: unset !important;
 }

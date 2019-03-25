@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Code.Gamelet.com
+# This file is distributed under the same license as the Code.Gamelet Doc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Code.Gamelet Doc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-25 13:30-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:4
+msgid "發射飛彈"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:5
+msgid "這一節，我們將會新增四個新的事件:"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:7
+msgid "發射子彈: 每按滑鼠左鍵一次就放出一枚飛彈。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:8
+msgid "子彈飛行: 讓飛彈朝固定方向持續飛行。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:9
+msgid "子彈撞怪物: 檢查所有飛彈與所有怪獸的碰撞，讓飛彈能夠炸死怪獸。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:10
+msgid "怪物全死光: 檢查所有怪獸是否全部被消滅，並在怪獸全滅時彈出結束視窗。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:13
+msgid "發射子彈"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:14
+msgid "新增一個事件ID為 發射子彈 的事件，並設定為 **無限重覆** ，並將 **重覆間隔** 設定為 **150** 毫秒。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:None
+msgid ":icon:`info` 什麼是 **重覆間隔**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:18
+msgid "當一個事件被設定可以重覆執行時，我們可以設定事件的 **重覆間隔** ，代表事件觸發並通過檢查後，下一次事件還能再次被觸發的最快時間間隔。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:20
+msgid "在這個範例中，我們設定 重覆間隔 為 150 毫秒(0.15秒)，代表玩家最快每 150 毫秒可以發射一枚飛彈。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:22
+msgid "我們將在這個事件中加入一個觸發(監聽滑鼠左鍵在被點擊時醒來檢查)，加入一個檢查(檢查戰機是否還活著)，以及三個動作: 將飛彈圖放上舞台、設定飛彈在飛出畫面外自動消失、設定飛彈的初始位置及角度。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:25
+msgid "(觸發) 滑鼠點擊"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:26
+msgid "在 發射子彈 事件中按下 **觸發** :btnicon:`add` 開啟新增觸發的視窗，並從目錄中選擇 **輸入** :icon:`chevron_right` **滑鼠點擊** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:28
+msgid "觸發時機: **點擊滑鼠按鍵(click)**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:29
+msgid "檢查按鈕: **左鍵**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:32
+#: ../../source/tutorials/cgevents/edit-bullets.rst:208
+msgid "(檢查) 變數是否存在"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:33
+#: ../../source/tutorials/cgevents/edit-bullets.rst:209
+msgid "在 發射子彈 事件中按下 **檢查** :btnicon:`add` 開啟新增檢查的視窗，並從目錄中選擇 **變數** :icon:`chevron_right` **變數是否存在** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:35
+msgid "用來尋找變數的鍵名(Key): **fighter0**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:36
+msgid "檢查: **存在**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:None
+msgid ":icon:`info` 什麼是 **變數**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:40
+msgid "變數 是程式語言中的專有名詞，英文叫 variable，可以把它想像成一個箱子，裏面可以放一個物件，也可以把裏面的東西拿出來改放另一個物件，箱子的上面有貼死一個名條， 當電腦呼叫名條上的名字時，就等於在呼叫箱子裏存放的物件一樣。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:43
+msgid "在這個範例中， fighter0 就是一個箱子的名字，裏面放的東西是玩家的戰機，這個變數原本是在第一個事件(初始化)中的動作 建立圖層佈局 裏建立的 (在同一個動作裏還建立了 background0, monster0, monster1, monster2, monster3)， 在 怪物撞戰機 事件中，有一個 移除物件 的動作裏，我們將 fighter0 的箱子清空。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:47
+msgid "因此在 怪物撞戰機 事件發生過後，檢查 變數是否存在 時，我們打開箱子就會發現裏面原本存放的戰機已經不存在了。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:50
+#: ../../source/tutorials/cgevents/edit-bullets.rst:156
+msgid "(動作) 建立圖層佈局"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:51
+msgid "當滑鼠點擊觸發後，檢查 fighter0 變數內容仍存在的情況下，發射子彈事件的動作就會被執行。第一件要做的動作是把飛彈的圖片放到舞台上。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:53
+msgid "在 發射子彈 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **新增** :icon:`chevron_right` **顯示** :icon:`chevron_right` **建立圖層佈局** ， 父節點的物件ID填入 **gameroot** ，並將飛彈圖片(bullet)拉到舞台上，然後按下左上角的綠色勾勾完成。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:57
+msgid "(動作) 自動移除圖片"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:58
+msgid "在遊戲中，玩家肯定為了擊敗怪獸會不斷發射飛彈，若舞台上的飛彈越積越多，電腦最後一定會吃不消，畫面會越變越慢，最終可能導至我們的遊戲網頁當掉或被瀏覽器強制關閉之類不好的遊戲體驗。 **自動移除圖片** 的功能就是為了防止這種事情發生的便利工具，這個動作可以讓圖片在離開畫面後自動消失，保持電腦的效能。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:61
+msgid "在 發射子彈 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **移除** :icon:`chevron_right` **顯示** :icon:`chevron_right` **自動移除圖片** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:63
+#: ../../source/tutorials/cgevents/edit-bullets.rst:75
+msgid "物件的ID: **bullet0**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:64
+msgid "可視範圍: **全螢幕**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:65
+msgid "延遲啟動: **100** 毫秒"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:70
+#: ../../source/tutorials/cgevents/edit-bullets.rst:94
+#: ../../source/tutorials/cgevents/edit-bullets.rst:170
+msgid "(動作) 更新顯示物件"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:71
+msgid "最後要把飛彈的位置放在戰機的位置上，並把角度調整至鼠標所在的方向。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:73
+msgid "在 發射子彈 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **更新** :icon:`chevron_right` **顯示** :icon:`chevron_right` **更新顯示物件** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:76
+msgid "勾選 **設定位置** ，設定方式選擇 **設定在一個顯示物件上** ，目標物件 **fighter0**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:77
+msgid "勾選 **設定旋轉角度** ，設定方式選擇 **轉向鼠標** ，旋轉率 **1**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:80
+msgid "子彈飛行"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:81
+msgid "飛彈被創造出來後，接著就是要讓飛彈朝它面對的方向持特飛行，直到飛出畫面外，讓 自動移除圖片 的動作幫我們自動移除飛彈。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:83
+msgid "新增一個事件ID為 子彈飛行 的事件，並設定為 **無限重覆** 。我們將在這個事件中加入一個檢查以及一個動作，用來控制所有飛彈們的飛行。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:86
+#: ../../source/tutorials/cgevents/edit-bullets.rst:122
+#: ../../source/tutorials/cgevents/edit-bullets.rst:131
+msgid "(檢查) For Each"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:87
+msgid "在 子彈飛行 事件中按下 **檢查** :btnicon:`add` 開啟新增檢查的視窗，並從目錄中選擇 **迴圈** :icon:`chevron_right` **For Each** 。 我們要在這個For Each中找到所有名字(ID)以 bullet 作為開頭的物件，並對這些物件都執行一個 **更新顯示物件** 的動作，讓所有的飛彈都持續朝一個方向前進。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:90
+msgid "區域變數名稱: **instance**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:91
+msgid "用來搜尋物件的ID: **bullet***"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:95
+msgid "在 子彈飛行 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **更新** :icon:`chevron_right` **顯示** :icon:`chevron_right` **更新顯示物件** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:97
+msgid "物件的ID: **instance**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:98
+msgid "勾選 **設定位置** ，設定方式選擇 **朝一個方向移動** ，距離填入 **10**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:None
+msgid ":icon:`info` 方向 **{this.rotationDeg}** ?"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:102
+msgid "這個動作中的 **方向** 參數，決定了要讓飛彈朝哪個方向前進，這個欄位需要輸入一個角度(0 ~ 360)，但這裏預設填入的 {this.rotationDeg} 是什麼意思呢？"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:104
+msgid "首先 {...} 這一對大括號，是光暈同人陣延續到CG同人陣的語法，用來告訴電腦，我們現在要輸入的角度不是一個靜態的數字，而是一個需要翻譯並尋找的數字， this.rotationDeg 翻譯成中文就是像這樣"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:107
+msgid "**this** 這個動作的目標物件"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:108
+msgid "**.** 的(介繫詞)"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:109
+msgid "**rotationDeg** 以角度(degree)為單位的方向"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:111
+msgid "所以 {this.rotationDeg} 整個翻譯下來的意思，就是 這個動作中的飛彈目前面向的角度。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:113
+msgid "完成這個事件後，可以試玩一下，遊戲在這個階段就可以爽快的連續發射飛彈了。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:116
+msgid "子彈撞怪物"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:117
+msgid "在這裏，我們要做一個和 怪物撞戰機 非常類似的事件，檢查是否有其中一顆飛彈擊中其中一隻怪獸，但在這個事件中的迴圈檢查，我們將用到 **雙層迴圈** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:119
+msgid "新增一個事件ID為 子彈撞怪物 的事件，並設定為 **無限重覆** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:123
+msgid "首先是第一層迴圈，用來找出所有飛彈放入迴圈中。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:125
+#: ../../source/tutorials/cgevents/edit-bullets.rst:134
+msgid "在 子彈撞怪物 事件中按下 **檢查** :btnicon:`add` 開啟新增檢查的視窗，並從目錄中選擇 **迴圈** :icon:`chevron_right` **For Each** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:127
+msgid "區域變數名稱: bullet"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:128
+msgid "用來搜尋物件的ID: bullet*"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:132
+msgid "接著是第二層迴圈，用來找出所有怪獸放入第二層迴圈中。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:136
+msgid "區域變數名稱: monster"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:137
+msgid "用來搜尋物件的ID: monster*"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:139
+msgid "在雙層迴圈中，每一次的迴圈都會將找到的其中一個飛彈取名為 bullet, 還有其中一隻怪獸取名為 monster ，提供事件中的動作的目標物件。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:142
+msgid "(檢查) 物件重疊"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:143
+msgid "在 子彈撞怪物 事件中按下 **檢查** :btnicon:`add` 開啟新增檢查的視窗，並從目錄中選擇 **顯示** :icon:`chevron_right` **物件重疊** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:145
+msgid "顯示物件的ID: **bullet**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:146
+msgid "顯示物件的ID: **monster**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:147
+msgid "檢查方式: **距離**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:148
+msgid "距離: **30**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:None
+msgid ".. image:: tutorials/cgevents/img/check_foreach_bullets_monsters.zh.png"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:153
+msgid "參考上圖可以發現，物件重疊是在雙層迴圈之內，所以可以調用迴圈給飛彈和怪物暫時取的小名 bullet 和 monster 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:157
+msgid "在 子彈撞怪物 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **新增** :icon:`chevron_right` **顯示** :icon:`chevron_right` **建立圖層佈局** ， 用來加入爆炸的特效。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:160
+msgid "父節點的物件ID: **gameroot**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:161
+msgid "圖片佈局"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:163
+msgid "將 explosion 這個資源拉進舞台"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:164
+msgid "將explosion的轉軸設到中心位置 x: -35 , y: -27"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:165
+msgid "勾選動畫的 **播放** 與 **自動移除**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:171
+msgid "剛剛加入的爆炸特效要移動到怪獸的位置。 在 子彈撞怪物 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **更新** :icon:`chevron_right` **顯示** :icon:`chevron_right` **更新顯示物件** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:174
+msgid "物件的ID: **explosion0**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:175
+msgid "勾選 **設定位置** ，設定方式選擇 **設定在一個顯示物件上** ，目標物件 **monster**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:178
+#: ../../source/tutorials/cgevents/edit-bullets.rst:185
+msgid "(動作) 移除物件"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:179
+msgid "將飛彈從舞台上移除。 在 子彈撞怪物 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **移除** :icon:`chevron_right` **移除物件** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:182
+msgid "物件ID: **bullet**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:186
+msgid "將怪獸從舞台上移除。 在 子彈撞怪物 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **移除** :icon:`chevron_right` **移除物件** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:189
+msgid "物件ID: **monster**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:191
+msgid "完成這個事件後，可以再試玩一下，現在可以發射飛彈，並讓被擊中的怪獸炸開消失了。 接下來剩最後一個事件: 怪物全死光。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:195
+msgid "怪物全死光"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:196
+msgid "在這個事件中，我們會在每次 子彈撞怪物 事件發生後(代表有怪獸被消滅的時候)，檢查如果全部的怪獸都消失後，要彈出一個任務完成的視窗。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:198
+msgid "新增一個事件ID為 怪物全死光 的事件，這個事件不需要重覆(重覆次數0)。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:201
+msgid "(觸發) 事件觸發後"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:202
+msgid "在 怪物全死光 事件中按下 **觸發** :btnicon:`add` 開啟新增觸發的視窗，並從目錄中選擇 **事件** :icon:`chevron_right` **事件觸發後** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:204
+msgid "事件的ID: **子彈撞怪物**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:205
+msgid "觸發時機: **在事件中的所有動作全部執行完畢後**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:211
+msgid "用來尋找變數的鍵名(Key): **monster***"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:212
+msgid "檢查: **不存在**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:None
+msgid ":icon:`info` 星號搜尋"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:216
+msgid "這裏我們再次使用 * (星號)來搜尋怪獸，只要找到一隻名字以 monster 開頭的怪獸，這個檢查就不會通過。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:219
+msgid "(動作) 彈出確認視窗"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:220
+msgid "彈出顯示任務完成遊戲結束的視窗。 在 怪物撞戰機 事件中按下 **動作** :btnicon:`add` 開啟新增動作的視窗，並從目錄中選擇 **彈出視窗** :icon:`chevron_right` **彈出確認視窗** 。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:223
+msgid "彈出視窗的ID: **gameclear**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:224
+msgid "標題: **Level Complete**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:225
+msgid "勾選 **隱藏取消按鈕**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:226
+msgid "確認按鈕文字: **再一次**"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:228
+msgid "當玩家按下這個視窗(gameclear)的「再一次」按鈕後，上上節製作的 重新一次 事件就會被觸發，這個事件表重新再跑一次。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:231
+msgid "製作完成"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:232
+msgid "恭喜完成了你在CG的第一個遊戲！ 你可以試玩看看，改改事件中的參數，或試試在製作過程中偷瞄到的各種功能。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:0
+msgid ".. image:: tutorials/cgevents/img/events_full_done.zh.png"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:241
+msgid "試玩遊戲 https://spaceshooter-zh.gamelet.online/play/v0.0.1"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:242
+msgid "遊戲專案 https://code.gamelet.com/edit/SpaceShooter_zh"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:245
+msgid "下一步"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/edit-bullets.rst:246
+msgid "接下來，我們要做一些和遊戲內容比較不相干的事: :ref:`tutorials.cgevents.publish-build` 。"
+msgstr ""
+

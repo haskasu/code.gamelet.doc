@@ -32,3 +32,84 @@ dl.docutils dd {
 .fullwidth {
     max-width: 100%;
 }
+
+/* general */
+div.section div.section {
+    margin-left: 15px;
+}
+.btn-icon {
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px 3px;
+    font-size: 20px !important;
+}
+.center-icon {
+    margin-left: 45%;
+}
+.borders {
+    border: 1px solid #333;
+}
+
+/* topic directive */
+div.topic {
+    margin: 0 0 1em 2em;
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    padding: 12px 15px;
+    border-radius: 5px;
+}
+div.topic > p {
+    margin: 0.7em 0 0 0;
+    color: rgba(0,0,0,0.75);
+}
+
+div.topic > p.topic-title {
+    margin: 0;
+    color: darkolivegreen;
+}
+
+/* for js */
+div.collapse {
+    max-height: 60px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+}
+div.collapse.opened {
+    max-height: 2000px;
+}
+div.collapse > * {
+    display: none;
+}
+div.collapse > .first {
+    cursor: pointer;
+}
+div.collapse > .first, div.collapse.opened > * {
+    display: block;
+}
+div.collapse > .first::after {
+    color: #333;
+    margin-left: 2px;
+    font-family: Material Icons;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1px;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga";
+    content: 'arrow_drop_down';
+    transform: translateY(6px) rotate(90deg);
+    transition: transform 0.2s ease-out;
+}
+div.collapse.opened > .first::after {
+    content: 'arrow_drop_down';
+    transform: translateY(6px) rotate(0);
+}

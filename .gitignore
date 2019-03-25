@@ -1,4 +1,4 @@
 /**/node_modules
 build/html
 server.json
-source/_static/css/cg.min.css
+source/_static/**/*.min.*

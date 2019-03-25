@@ -142,6 +142,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 def setup(app):
     app.add_css_file('css/cg.min.css')
+    app.add_js_file('js/cg.min.js')
     
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'CGDocdoc'

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Code.Gamelet Doc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-18 10:17-0400\n"
+"POT-Creation-Date: 2018-12-18 06:58-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/get-started.rst:2
-msgid "Get Started"
+msgid "快速入門"
 msgstr ""
 
-#: ../../source/get-started.rst:4
-msgid "some text for get started"
+#: ../../source/get-started.rst:3
+msgid "以下將由一個簡單的示範教學，引領同學們快速掌握創作遊戲所需掌握的CG功能。如果您"
+msgstr ""
+
+#: ../../source/get-started.rst:5
+msgid "\\ :icon:`forward` 只想製作遊戲，但對程式語言沒輒，也沒有一個團隊的支援 :ref:`請走這裏 <tutorials.cgevents>`"
+msgstr ""
+
+#: ../../source/get-started.rst:7
+msgid "不想撰寫程式的人可以利用「CG同人陣」製作遊戲。CG同人陣是一套以遊戲事件為設計單位的先進遊戲製作方式， 只要動腦設計，加上點點按鈕、填填數字就可以完成遊戲的製作。"
+msgstr ""
+
+#: ../../source/get-started.rst:11
+msgid "\\ :icon:`forward` 我想製作遊戲順便學點程式語言 :ref:`請走這裏 <tutorials.coding>`"
+msgstr ""
+
+#: ../../source/get-started.rst:13
+msgid "CG提供了強大且功能完整的線上程式設計編輯器，不需經過繁雜的系統環境設定和軟體安裝，只要在CG網站上就能完成遊戲製作。"
 msgstr ""
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Code.Gamelet Doc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-27 10:08-0400\n"
+"POT-Creation-Date: 2018-12-18 06:58-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,71 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../source/index.rst:7
+#: ../../source/index.rst:2
 msgid "觀迎使用CG的教學文件"
 msgstr ""
 
+#: ../../source/index.rst:3
+msgid "Code.Gamelet.com (簡稱CG)，是個適合各種程度的夢想家製作遊戲的平台。"
+msgstr ""
+
+#: ../../source/index.rst:5
+msgid "CG的摳的功能，可以將別人分享的圖案、音效、動畫、甚至程式碼摳到自己的專案使用，即使只有一個人也可以製作專業的遊戲。"
+msgstr ""
+
+#: ../../source/index.rst:6
+msgid "CG的事件編輯器，可以在不碰一行程式碼的條件下完成專業的遊戲製作。"
+msgstr ""
+
 #: ../../source/index.rst:8
-msgid "Code.Gamelet.com (簡稱CG)，是個幫助充滿遊戲點子的夢想家實現夢想的遊戲製作平台。"
+msgid "同學們可以在這份CG的教學文件中，找到囊括上述功能的各項教學，並學會製作遊戲的一身功夫。"
 msgstr ""
 
-#: ../../source/index.rst:10
-msgid "CG的刀叉功能，可以將別人在CG分享的圖案、音效、動畫、甚至程式碼摳到你的專案使用，即使只有一個人也可以製作專業的遊戲。"
-msgstr ""
-
-#: ../../source/index.rst:13
-msgid "特色與好處"
-msgstr ""
-
-#: ../../source/index.rst:14
-msgid "CG內建的事件編輯器，不需看到一行程式碼就能輕鬆製作遊戲"
-msgstr ""
-
-#: ../../source/index.rst:15
-msgid "圖案、音效、動畫、甚至程式碼都能分享使用"
-msgstr ""
-
-#: ../../source/index.rst:16
-msgid "完整強大的線上程式編輯器(Typescript IDE)"
-msgstr ""
-
-#: ../../source/index.rst:17
-msgid "遊戲成品可選擇直接發佈在CG平台上"
-msgstr ""
-
-#: ../../source/index.rst:18
-msgid "遊戲成品也可以匯出至個人網站或Android等手機應用程式"
-msgstr ""
-
-#: ../../source/index.rst:21
-msgid "快速入門"
-msgstr ""
-
-#: ../../source/index.rst:22
-msgid "以下將由一個簡單的示範教學，引領同學們快速掌握創作遊戲所需掌握的CG功能。如果您"
-msgstr ""
-
-#: ../../source/index.rst:27
-msgid ""
-"\\ :icon:`forward` 只想製作遊戲，但對程式語言沒輒，也沒有一個團隊的支援 :ref:`請走這裏 "
-"<tutorials.cgevents>`"
-msgstr ""
-
-#: ../../source/index.rst:25
-msgid ""
-"不想撰寫程式的人可以利用「CG同人陣」製作遊戲。CG同人陣是一套以遊戲事件為設計單位的先進遊戲製作方式， "
-"只要動腦設計，加上點點按鈕、填填數字就可以完成遊戲的製作。"
-msgstr ""
-
-#: ../../source/index.rst:30
-msgid "\\ :icon:`forward` 我想製作遊戲順便學點程式語言 :ref:`請走這裏 <tutorials.coding>`"
-msgstr ""
-
-#: ../../source/index.rst:30
-msgid "CG提供了強大且功能完整的線上程式設計編輯器，不需經過繁雜的系統環境設定和軟體安裝，只要在CG網站上就能完成遊戲製作。"
-msgstr ""
-
-#: ../../source/index.rst:33
+#: ../../source/index.rst:11
 msgid "文件目錄"
 msgstr ""
 
@@ -99,5 +55,51 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "I dont understand how this works."
+#~ msgstr ""
+
+#~ msgid "Code.Gamelet.com (簡稱CG)，是個幫助充滿遊戲點子的夢想家實現夢想的遊戲製作平台。"
+#~ msgstr ""
+
+#~ msgid "CG的刀叉功能，可以將別人在CG分享的圖案、音效、動畫、甚至程式碼摳到你的專案使用，即使只有一個人也可以製作專業的遊戲。"
+#~ msgstr ""
+
+#~ msgid "特色與好處"
+#~ msgstr ""
+
+#~ msgid "CG內建的事件編輯器，不需看到一行程式碼就能輕鬆製作遊戲"
+#~ msgstr ""
+
+#~ msgid "圖案、音效、動畫、甚至程式碼都能分享使用"
+#~ msgstr ""
+
+#~ msgid "完整強大的線上程式編輯器(Typescript IDE)"
+#~ msgstr ""
+
+#~ msgid "遊戲成品可選擇直接發佈在CG平台上"
+#~ msgstr ""
+
+#~ msgid "遊戲成品也可以匯出至個人網站或Android等手機應用程式"
+#~ msgstr ""
+
+#~ msgid "快速入門"
+#~ msgstr ""
+
+#~ msgid "以下將由一個簡單的示範教學，引領同學們快速掌握創作遊戲所需掌握的CG功能。如果您"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\\ :icon:`forward` 只想製作遊戲，但對程式語言沒輒，也沒有一個團隊的支援 "
+#~ ":ref:`請走這裏 <tutorials.cgevents>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "不想撰寫程式的人可以利用「CG同人陣」製作遊戲。CG同人陣是一套以遊戲事件為設計單位的先進遊戲製作方式， "
+#~ "只要動腦設計，加上點點按鈕、填填數字就可以完成遊戲的製作。"
+#~ msgstr ""
+
+#~ msgid "\\ :icon:`forward` 我想製作遊戲順便學點程式語言 :ref:`請走這裏 <tutorials.coding>`"
+#~ msgstr ""
+
+#~ msgid "CG提供了強大且功能完整的線上程式設計編輯器，不需經過繁雜的系統環境設定和軟體安裝，只要在CG網站上就能完成遊戲製作。"
 #~ msgstr ""
 

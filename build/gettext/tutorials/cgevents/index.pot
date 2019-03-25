@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Code.Gamelet Doc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-27 10:08-0400\n"
+"POT-Creation-Date: 2019-03-25 13:30-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,34 +21,183 @@ msgid "CG同人陣製作示範教學"
 msgstr ""
 
 #: ../../source/tutorials/cgevents/index.rst:6
-msgid "CG同人陣是一套以遊戲事件為設計單位的遊戲製作方式，不用撰寫程式，只要專注於遊戲事件表的設計，就可以完成遊戲的製作。"
-msgstr ""
-
-#: ../../source/tutorials/cgevents/index.rst:8
-msgid "以下將一步一步帶領同學們一邊製作你的第一個CG遊戲，一邊瞭解CG的各種功能。"
+msgid "CG同人陣是一套以遊戲事件為設計單位的遊戲製作方式，不用撰寫程式，只要專注於遊戲事件表的設計，就能完成遊戲的製作。 以下將一步一步帶領同學們一邊製作你的第一個CG遊戲，一邊瞭解CG的各項功能。"
 msgstr ""
 
 #: ../../source/tutorials/cgevents/index.rst:11
-msgid "登入CG"
+msgid "本示範教學有範本專案可以參考"
 msgstr ""
 
 #: ../../source/tutorials/cgevents/index.rst:13
-msgid "進入 https://code.gamelet.com/games 後，記得先登入帳號(登入按鈕在網頁右上方)，你可以使用Google、Facebook等帳號進行登入。"
+msgid "試玩遊戲 https://spaceshooter-zh.gamelet.online/play/v0.0.1"
 msgstr ""
 
-#: ../../source/tutorials/cgevents/index.rst:15
-msgid "未登入也可以在CG裏逛逛，玩玩別人的遊戲或看看別人的專案內容。"
+#: ../../source/tutorials/cgevents/index.rst:14
+msgid "遊戲專案 https://code.gamelet.com/edit/SpaceShooter_zh"
 msgstr ""
 
-#: ../../source/tutorials/cgevents/index.rst:18
-msgid "新創專案"
+#: ../../source/tutorials/cgevents/index.rst:17
+msgid "登入CG"
 msgstr ""
 
 #: ../../source/tutorials/cgevents/index.rst:19
-msgid "登入後在 https://code.gamelet.com/profile/ 這一頁可以找到「新創專案」的按鈕。 因為我們要使用CG同人陣的功能，所以記得勾選「CgEventsLib」這個插件，然後再點擊「新增一個空白專案」。"
+msgid "進入 https://code.gamelet.com/games 後，記得先登入帳號(登入按鈕在網頁右上方)，你可以使用Google、Facebook等帳號進行登入。"
 msgstr ""
 
-#: ../../source/tutorials/cgevents/index.rst:26
+#: ../../source/tutorials/cgevents/index.rst:21
+msgid "未登入也可以在CG裏逛逛，玩玩別人的遊戲或看看別人公開的專案內容。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:24
+msgid "新創專案"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:25
+msgid "登入後在 https://code.gamelet.com/profile/ 這一頁可以找到「新創專案」的按鈕。 在新增一個空白專案中點擊「新增一個空白專案」，輸入專案代碼後點擊「新創專案」。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:None
+msgid ":icon:`priority_high` 專案代碼"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:30
+msgid "專案代碼是CG用來識別專案的代碼，必須是獨一無二的。這個專案代碼是也會用來組成CG送給專案的網址，例如專案的代碼若是 Cool_Shooting_Game， 那麼未來這個專案有了成品後，玩家們就可以在 https://cool-shooting-game.gamelet.online 上遊玩這個專案的成品。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:None
+msgid ".. image:: tutorials/cgevents/img/create_project.zh.png"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:38
 msgid "打開事件表"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:40
+msgid "專案建立後就會自動打開專案編輯器，首先被開啟的就是 README.md 這個檔案。點擊「編輯遊戲事件表」即可快速開啟 game.events 這個檔案。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:43
+msgid ".. image:: tutorials/cgevents/img/open_events_sheet.zh.png"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:None
+#: ../../source/tutorials/cgevents/index.rst:None
+msgid ":icon:`info` game.events"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:46
+msgid "專案在建立時會自動產生一些文件，包括 README.md (讀我檔)，用來說明這個專案的大小事。 因為我們在建立專案時選擇載入 CgEventsLib 這個函式庫，所以CG除了 README.md 外又幫我們產生了 game.events (事件表)， 你也可以在左邊的檔案總管裏找到並開啟這個檔案。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:51
+msgid "瞭解事件表"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:53
+msgid "使用事件表製作遊戲的系統，暱稱為「CG同人陣」，是由 **光暈同人陣** <https://http://tw.gamelet.com/gameMission.do?code=csArena/>演化而來的。 CG同人陣讓製作遊戲不再需要寫程式，透過安排事件情節的方式就可以製作專業級的遊戲或應用程式。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:56
+msgid "利用CG上的事件表編輯器，設定各種事件讓遊戲在各種情節中挑選設計好的流程執行各項指令。你只要設計好事件表，之後就交給 **CgEventsLib** 幫你將指令轉換為程式碼。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:59
+msgid "認識CgEventsLib"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:61
+msgid "CgEventsLib是以事件表為資料來源的應用程式引擎，在應用程式執行時載入一個 **.events** 檔案(即事件表)後，CgEventsLib就會依照事件表的安排，依照情節執行各種指令。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:65
+msgid "CgEventsLib是一個遊戲引擎，他的核心是另一個函式庫 **CgEventsEngine** ，CgEventsLib依照CgEventsEngine所製訂的格式，提供遊戲製作常用的指令集，例如將圖片放到舞台上、播放聲音、移動物件等。 CG中還有其他的遊戲引擎也使用了CgEventsEngine並提供不同種類的指令集。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:69
+msgid "事件表的組成元素"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:71
+msgid "事件表中是以「事件」為單位來設計的，而事件由三種元素所組成 - 觸發、檢查、動作。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:73
+msgid "觸發：設定事件在什麼事情發生後醒過來。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:74
+msgid "檢查：在事件醒過來後，檢查情況是不是符合執行工作的前提。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:75
+msgid "動作：在事件醒過來並通過所有檢查後，接下來要執行的動作指令。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:None
+msgid ":icon:`info`"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:79
+msgid "在這邊舉一個簡單的例子讓大家更容易瞭解事件運作的實際情況。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:81
+msgid "如果在遊戲中有一台飛機，我們想讓玩家按下滑鼠左鍵時，讓飛機發射子彈。 這個情節轉換成CG同人陣的事件後，就會像下面這樣："
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:85
+msgid "觸發"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:85
+msgid "當滑鼠左鍵按下時觸發"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:89
+msgid "檢查"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:88
+msgid "檢查玩家的飛機是否還活著"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:89
+msgid "檢查玩家的飛機是否還有剩餘子彈"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:94
+msgid "動作"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:92
+msgid "放一張子彈的圖在舞台上"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:93
+msgid "調整子彈的位置、面向角度、速度等"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:94
+msgid "播放子彈發射的音效"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:96
+msgid "至於子彈的飛行需要另一個事件，稍後我們實際製作遊戲時會說明。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:None
+msgid ":icon:`priority_high` 沒有「觸發」的事件"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:100
+msgid "事件中可以沒有「檢查」（即觸發後一定會執行動作），可以沒有「動作」（觸發後不做事），但沒有「觸發」的話，事件會在什麼時候醒來運作呢？"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:102
+msgid "答案：沒有「觸發」的事件會在事件表一開始運作時就會自動被觸發，你可以透過調整事件的屬性\"起始時間\"來延後自動觸發的時機， 也可以加上檢查，讓事件一直醒著做檢查，直到檢查通過後執行動作。"
+msgstr ""
+
+#: ../../source/tutorials/cgevents/index.rst:106
+msgid "接著讓我們開始編輯事件表吧"
 msgstr ""
 

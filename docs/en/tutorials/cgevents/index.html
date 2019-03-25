@@ -21,11 +21,11 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/cg.min.js"></script>
     <script type="text/javascript" src="../../_static/sphinx_materialdesign_theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="寫程式做遊戲示範教學" href="../coding/index.html" />
+    <link rel="next" title="編輯事件表" href="edit-events.html" />
     <link rel="prev" title="示範教學" href="../index.html" /> 
   </head>
 <body>
@@ -102,7 +102,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intro.html">平台介紹</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../get-started.html">快速入門</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">示範教學</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">CG同人陣製作示範教學</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CG同人陣製作示範教學</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="edit-events.html">編輯事件表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit-monsters.html">讓怪獸動起來</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit-bullets.html">發射飛彈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publish-build.html">發佈遊戲成品</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../coding/index.html">寫程式做遊戲示範教學</a></li>
 </ul>
 </li>
@@ -136,7 +142,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intro.html">平台介紹</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../get-started.html">快速入門</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">示範教學</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">CG同人陣製作示範教學</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CG同人陣製作示範教學</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="edit-events.html">編輯事件表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit-monsters.html">讓怪獸動起來</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edit-bullets.html">發射飛彈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publish-build.html">發佈遊戲成品</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../coding/index.html">寫程式做遊戲示範教學</a></li>
 </ul>
 </li>
@@ -153,24 +165,111 @@
         
   <div class="section" id="cg">
 <span id="tutorials-cgevents"></span><h1>CG同人陣製作示範教學<a class="headerlink" href="#cg" title="Permalink to this headline">¶</a></h1>
-<p>CG同人陣是一套以遊戲事件為設計單位的遊戲製作方式，不用撰寫程式，只要專注於遊戲事件表的設計，就可以完成遊戲的製作。</p>
-<p>以下將一步一步帶領同學們一邊製作你的第一個CG遊戲，一邊瞭解CG的各種功能。</p>
+<p>CG同人陣是一套以遊戲事件為設計單位的遊戲製作方式，不用撰寫程式，只要專注於遊戲事件表的設計，就能完成遊戲的製作。
+以下將一步一步帶領同學們一邊製作你的第一個CG遊戲，一邊瞭解CG的各項功能。</p>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 先睹為快</p>
+<p>本示範教學有範本專案可以參考</p>
+<ul class="simple">
+<li>試玩遊戲 <a class="reference external" href="https://spaceshooter-zh.gamelet.online/play/v0.0.1">https://spaceshooter-zh.gamelet.online/play/v0.0.1</a></li>
+<li>遊戲專案 <a class="reference external" href="https://code.gamelet.com/edit/SpaceShooter_zh">https://code.gamelet.com/edit/SpaceShooter_zh</a></li>
+</ul>
+</div>
 <div class="section" id="id1">
 <h2>登入CG<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>進入 <a class="reference external" href="https://code.gamelet.com/games">https://code.gamelet.com/games</a> 後，記得先登入帳號(登入按鈕在網頁右上方)，你可以使用Google、Facebook等帳號進行登入。</p>
 <blockquote>
-<div>未登入也可以在CG裏逛逛，玩玩別人的遊戲或看看別人的專案內容。</div></blockquote>
+<div>未登入也可以在CG裏逛逛，玩玩別人的遊戲或看看別人公開的專案內容。</div></blockquote>
 </div>
 <div class="section" id="id2">
 <h2>新創專案<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>登入後在 <a class="reference external" href="https://code.gamelet.com/profile/">https://code.gamelet.com/profile/</a> 這一頁可以找到「新創專案」的按鈕。
-因為我們要使用CG同人陣的功能，所以記得勾選「CgEventsLib」這個插件，然後再點擊「新增一個空白專案」。</p>
+在新增一個空白專案中點擊「新增一個空白專案」，輸入專案代碼後點擊「新創專案」。</p>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">priority_high</span> 專案代碼</p>
+<p>專案代碼是CG用來識別專案的代碼，必須是獨一無二的。這個專案代碼是也會用來組成CG送給專案的網址，例如專案的代碼若是 Cool_Shooting_Game，
+那麼未來這個專案有了成品後，玩家們就可以在 <a class="reference external" href="https://cool-shooting-game.gamelet.online">https://cool-shooting-game.gamelet.online</a> 上遊玩這個專案的成品。</p>
+</div>
 <img alt="tutorials\cgevents\img/create_project.png" class="fullwidth" src="tutorials\cgevents\img/create_project.png" />
 </div>
 <div class="section" id="id3">
 <h2>打開事件表<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<img alt="../../_images/image19.png" src="../../_images/image19.png" />
-<p>太好了</p>
+<p>專案建立後就會自動打開專案編輯器，首先被開啟的就是 README.md 這個檔案。點擊「編輯遊戲事件表」即可快速開啟 game.events 這個檔案。</p>
+<img alt="tutorials\cgevents\img/open_events_sheet.png" src="tutorials\cgevents\img/open_events_sheet.png" />
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> game.events</p>
+<p>專案在建立時會自動產生一些文件，包括 README.md (讀我檔)，用來說明這個專案的大小事。
+因為我們在建立專案時選擇載入 CgEventsLib 這個函式庫，所以CG除了 README.md 外又幫我們產生了 game.events (事件表)，
+你也可以在左邊的檔案總管裏找到並開啟這個檔案。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>瞭解事件表<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>使用事件表製作遊戲的系統，暱稱為「CG同人陣」，是由 <strong>光暈同人陣</strong> &lt;<a class="reference external" href="https://http://tw.gamelet.com/gameMission.do?code=csArena/">https://http://tw.gamelet.com/gameMission.do?code=csArena/</a>&gt;演化而來的。
+CG同人陣讓製作遊戲不再需要寫程式，透過安排事件情節的方式就可以製作專業級的遊戲或應用程式。</p>
+<p>利用CG上的事件表編輯器，設定各種事件讓遊戲在各種情節中挑選設計好的流程執行各項指令。你只要設計好事件表，之後就交給 <strong>CgEventsLib</strong> 幫你將指令轉換為程式碼。</p>
+<div class="section" id="cgeventslib">
+<h3>認識CgEventsLib<a class="headerlink" href="#cgeventslib" title="Permalink to this headline">¶</a></h3>
+<p>CgEventsLib是以事件表為資料來源的應用程式引擎，在應用程式執行時載入一個 <strong>.events</strong> 檔案(即事件表)後，CgEventsLib就會依照事件表的安排，依照情節執行各種指令。</p>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> game.events</p>
+<p>CgEventsLib是一個遊戲引擎，他的核心是另一個函式庫 <strong>CgEventsEngine</strong> ，CgEventsLib依照CgEventsEngine所製訂的格式，提供遊戲製作常用的指令集，例如將圖片放到舞台上、播放聲音、移動物件等。
+CG中還有其他的遊戲引擎也使用了CgEventsEngine並提供不同種類的指令集。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>事件表的組成元素<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>事件表中是以「事件」為單位來設計的，而事件由三種元素所組成 - 觸發、檢查、動作。</p>
+<ul class="simple">
+<li>觸發：設定事件在什麼事情發生後醒過來。</li>
+<li>檢查：在事件醒過來後，檢查情況是不是符合執行工作的前提。</li>
+<li>動作：在事件醒過來並通過所有檢查後，接下來要執行的動作指令。</li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span></p>
+<p>在這邊舉一個簡單的例子讓大家更容易瞭解事件運作的實際情況。</p>
+<p>如果在遊戲中有一台飛機，我們想讓玩家按下滑鼠左鍵時，讓飛機發射子彈。
+這個情節轉換成CG同人陣的事件後，就會像下面這樣：</p>
+<dl class="docutils">
+<dt>觸發</dt>
+<dd><ul class="first last simple">
+<li>當滑鼠左鍵按下時觸發</li>
+</ul>
+</dd>
+<dt>檢查</dt>
+<dd><ul class="first last simple">
+<li>檢查玩家的飛機是否還活著</li>
+<li>檢查玩家的飛機是否還有剩餘子彈</li>
+</ul>
+</dd>
+<dt>動作</dt>
+<dd><ul class="first last simple">
+<li>放一張子彈的圖在舞台上</li>
+<li>調整子彈的位置、面向角度、速度等</li>
+<li>播放子彈發射的音效</li>
+</ul>
+</dd>
+</dl>
+<p>至於子彈的飛行需要另一個事件，稍後我們實際製作遊戲時會說明。</p>
+</div>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">priority_high</span> 沒有「觸發」的事件</p>
+<p>事件中可以沒有「檢查」（即觸發後一定會執行動作），可以沒有「動作」（觸發後不做事），但沒有「觸發」的話，事件會在什麼時候醒來運作呢？</p>
+<p>答案：沒有「觸發」的事件會在事件表一開始運作時就會自動被觸發，你可以透過調整事件的屬性”起始時間”來延後自動觸發的時機，
+也可以加上檢查，讓事件一直醒著做檢查，直到檢查通過後執行動作。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>接著讓我們開始編輯事件表吧<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="edit-events.html">編輯事件表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edit-monsters.html">讓怪獸動起來</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edit-bullets.html">發射飛彈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish-build.html">發佈遊戲成品</a></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -187,6 +286,12 @@
 <li><a class="reference internal" href="#id1">登入CG</a></li>
 <li><a class="reference internal" href="#id2">新創專案</a></li>
 <li><a class="reference internal" href="#id3">打開事件表</a></li>
+<li><a class="reference internal" href="#id4">瞭解事件表</a><ul>
+<li><a class="reference internal" href="#cgeventslib">認識CgEventsLib</a></li>
+<li><a class="reference internal" href="#id5">事件表的組成元素</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">接著讓我們開始編輯事件表吧</a></li>
 </ul>
 </li>
 </ul>
@@ -204,11 +309,11 @@
             <div>示範教學</div>
          </div>
      </a>
-     <a id="button-next" href="../coding/index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
+     <a id="button-next" href="edit-events.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
         <i class="pagenation-arrow-R material-icons">arrow_forward</i>
         <div class="pagenation-text">
             <span class="pagenation-direction">Next</span>
-            <div>寫程式做遊戲示範教學</div>
+            <div>編輯事件表</div>
         </div>
      </a>
   </div>
@@ -228,7 +333,7 @@
 
     <div class="mdl-mini-footer__right-section">
         <div>&copy; Copyright 2018, Code.Gamelet.com.</div>
-      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.0 using <a href="https://github.com/myyasuda/sphinx_materialdesign_theme">sphinx_materialdesign_theme</a>.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.2 using <a href="https://github.com/myyasuda/sphinx_materialdesign_theme">sphinx_materialdesign_theme</a>.</div>
     </div>
 </footer>
         </main>

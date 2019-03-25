@@ -153,12 +153,45 @@ function buildCgCss(_locale) {
         "source/_assets/css/custom_post.css"
       ])
       .pipe(concat("cg.min.css"))
-      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(cleanCSS({ compatibility: 'ie8' }))
       .pipe(gulp.dest("source/_static/css"))
       .on("end", () => {
         resolve();
       });
   });
+}
+
+
+function buildCgJs(_locale) {
+  let debug = true;
+
+  if (debug) {
+    return new Promise((resolve, reject) => {
+      gulp
+        .src("source/_assets/js/*.js")
+        .pipe(concat("cg.min.js"))
+        .pipe(gulp.dest("source/_static/js"))
+        .on("end", () => {
+          resolve();
+        });
+    });
+  } else {
+    return new Promise((resolve, reject) => {
+      gulp
+        .src("source/_assets/js/*.js")
+        .pipe(concat("cg.js"))
+        .pipe(minify({
+          noSource: true,
+          ext: {
+            min: '.min.js'
+          }
+        }))
+        .pipe(gulp.dest("source/_static/js"))
+        .on("end", () => {
+          resolve();
+        });
+    });
+  }
 }
 
 function buildLocales(_locales, cb) {
@@ -193,11 +226,12 @@ function buildLocales(_locales, cb) {
         )
       )
       .then(() => buildCgCss(locale))
+      .then(() => buildCgJs(locale))
       .then(() => replaceConfigTranslates(null, locale))
       .then(() => {
         execute(
-          "make",
-          ["-e", `SPHINXOPTS="-D language='${locale.code}'"`, "html"],
+          ".\\make.bat",
+          ["html", "-e", `SPHINXOPTS="-D language='${locale.code}'"`],
           err => {
             if (err) {
               cb(err);
@@ -218,7 +252,7 @@ function buildLocales(_locales, cb) {
 }
 
 function getText(cb) {
-  execute("make", ["gettext"], cb);
+  execute(".\\make.bat", ["gettext"], cb);
 }
 
 function updatePo(cb) {
@@ -228,7 +262,7 @@ function updatePo(cb) {
 gulp.task("build", gulp.series(buildIntl, buildAll));
 gulp.task("buildone", gulp.series(buildOne));
 gulp.task("intl", gulp.series(getText, updatePo));
-gulp.task("open", function() {
-    return gulp.src('./docs/index.html')
-    .pipe(open({app: 'chrome'}));
+gulp.task("open", function () {
+  return gulp.src('./docs/index.html')
+    .pipe(open({ app: 'chrome' }));
 })

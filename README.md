@@ -4,13 +4,14 @@ Source of the Documentation of Code.Gamelet.com
 https://haskasu.github.io/code.gamelet.doc
 
 ## Install
-https://dont-be-afraid-to-commit.readthedocs.io/en/latest/documentation.html
-
-## Update
-pip install -U sphinx
+* install python3
+* add path to python\python37\Scripts
+* pip install -U sphinx
+* easy_install sphinx-intl
+* pip install sphinx_materialdesign_theme
 
 ## Commands
-easy_install sphinx-intl
+
 make gettext
 sphinx-intl update -p build/gettext
 sphinx-intl build
