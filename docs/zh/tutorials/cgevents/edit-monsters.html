@@ -176,7 +176,7 @@
 <h2>怪物飛行<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>新增一個事件ID為 怪物飛行 的事件，並設定為 <strong>無限重覆</strong> 。我們將在這個事件中加入一個檢查以及一個動作，用來控制怪獸們的飛行。</p>
 <div class="section" id="for-each">
-<h3>(檢查) For Each<a class="headerlink" href="#for-each" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) For Each<a class="headerlink" href="#for-each" title="永久链接至标题">¶</a></h3>
 <p>接著我們要加入一個檢查，但這是個特殊的檢查， <strong>迴圈</strong> 。</p>
 <div class="topic">
 <p class="topic-title first"><span class="material-icons mat-icon">info</span> 什麼是 <strong>迴圈</strong> 檢查</p>
@@ -211,7 +211,7 @@
 <img alt="../../_images/check_foreach_monsters.zh.png" class="fullwidth" src="../../_images/check_foreach_monsters.zh.png" />
 </div>
 <div class="section" id="id3">
-<h3>(動作) 更新顯示物件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 更新顯示物件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>在 怪物飛行 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> ，
 如同上一節讓戰機飛行的方式一樣，輸入下列資料讓怪獸飛行。</p>
 <ul class="simple">
@@ -224,7 +224,7 @@
 <p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 參考截圖</p>
 <img alt="../../_images/update_monster.zh.png" class="fullwidth" src="../../_images/update_monster.zh.png" />
 </div>
-<p>完成這個事件後，可以試玩一下，看看怪獸們是不是都朝著玩家的戰機飛來。不過此時即使怪獸撞上戰機也不會有任何事情發生，因為下一個事件，我們就要讓怪獸有能力把戰機撞爆。</p>
+<p>完成這個事件後，可以試玩一下，看看怪獸們是不是都朝著玩家的戰機飛來。不過此時即使怪獸撞上戰機也不會有任何事情發生，因此在下一個事件中，我們就要讓怪獸有能力把戰機撞爆。</p>
 </div>
 </div>
 <div class="section" id="id4">
@@ -233,7 +233,7 @@
 <p>我們將在這個事件中加入一個 <strong>迴圈</strong> 檢查、一個 <strong>物件重疊</strong> 檢查，用來測試是否有其中一隻怪獸和戰機的位置重疊。
 接著還會加入五個動作，在確認其中一隻怪獸和戰機位置重疊(碰撞)後，我們要從舞台上移除戰機並加入爆炸的特效。</p>
 <div class="section" id="id5">
-<h3>(檢查) For Each<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) For Each<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>在 怪物撞戰機 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>迴圈</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>For Each</strong> 。</p>
 <ul class="simple">
 <li>區域變數名稱: <strong>instance</strong></li>
@@ -242,7 +242,7 @@
 </ul>
 </div>
 <div class="section" id="id6">
-<h3>(檢查) 物件重疊<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) 物件重疊<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>在 怪物撞戰機 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>物件重疊</strong> 。</p>
 <ul class="simple">
 <li>顯示物件的ID: <strong>instance</strong></li>
@@ -257,7 +257,7 @@
 </div>
 </div>
 <div class="section" id="id7">
-<h3>(動作) 建立圖層佈局<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 建立圖層佈局<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>新增</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>建立圖層佈局</strong> ，
 用來加入爆炸的特效。</p>
 <ul class="simple">
@@ -271,7 +271,7 @@
 </ul>
 </div>
 <div class="section" id="id8">
-<h3>(動作) 更新顯示物件<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 更新顯示物件<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>剛剛加入的爆炸特效要移動到戰機的位置。
 在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> 。</p>
 <ul class="simple">
@@ -280,7 +280,7 @@
 </ul>
 </div>
 <div class="section" id="id9">
-<h3>(動作) 移除物件<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 移除物件<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>將戰機從舞台上移除。
 在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>移除</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>移除物件</strong> 。</p>
 <ul class="simple">
@@ -288,7 +288,7 @@
 </ul>
 </div>
 <div class="section" id="id10">
-<h3>(動作) 等待<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 等待<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p>在接下來的動作之前，先等待一秒。
 在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>系統</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>等待</strong> 。</p>
 <ul class="simple">
@@ -296,7 +296,7 @@
 </ul>
 </div>
 <div class="section" id="id11">
-<h3>(動作) 彈出確認視窗<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 彈出確認視窗<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <p>彈出顯示遊戲結束的視窗。
 在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>彈出確認視窗</strong> 。</p>
 <ul class="simple">
@@ -313,7 +313,7 @@
 <p>新增一個事件ID為 重新一次 的事件，這個事件不需要重覆(重覆次數0)。</p>
 <p>這個事件中會包含兩個 <strong>觸發</strong> ，用來監聽遊戲結束視窗中的「再一次」按鈕被玩家按下去的時機。觸發後不需要檢查，會執行一個動作，讓系統重新執行一次 game.events 這個事件表。</p>
 <div class="section" id="id13">
-<h3>(觸發) 視窗關閉<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<h3>(+觸發) 視窗關閉<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>監聽遊戲結束時彈出的視窗被玩家關閉的時機。
 在 重新一次 事件中按下 <strong>觸發</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增觸發的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>視窗關閉</strong> 。</p>
 <ul class="simple">
@@ -322,7 +322,7 @@
 </ul>
 </div>
 <div class="section" id="id14">
-<h3>(觸發) 視窗關閉<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<h3>(+觸發) 視窗關閉<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <p>前一個觸發是檢查玩家被怪獸撞爆時彈出的結束視窗。雖然還沒寫到後面的事件，但我們也需要監聽任務完成彈出的視窗被關閉的時機。
 在 重新一次 事件中按下 <strong>觸發</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增觸發的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>視窗關閉</strong> 。</p>
 <ul class="simple">
@@ -335,7 +335,7 @@
 </div>
 </div>
 <div class="section" id="id15">
-<h3>(動作) 執行事件表<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 執行事件表<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>在 重新一次 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>系統</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>視執行事件表</strong> 。</p>
 <ul class="simple">
 <li>檔案(.event): <strong>CG.SpaceShooter_zh/game.events</strong></li>
@@ -350,7 +350,7 @@
 <h2>下一步<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
 <p>到此為止，我們已經完成遊戲的一半了，接下來就要讓玩家的戰機裝上飛彈，和怪獸一決雌雄了。</p>
 <div class="collapse topic">
-<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 到此為止的事件參考截圖</p>
+<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 到此為止的事件表參考截圖</p>
 <img alt="../../_images/events_half_done.zh.png" class="fullwidth" src="../../_images/events_half_done.zh.png" />
 </div>
 <p><a class="reference internal" href="edit-bullets.html#tutorials-cgevents-edit-bullets"><span class="std std-ref">發射飛彈</span></a></p>
@@ -368,24 +368,24 @@
     <ul>
 <li><a class="reference internal" href="#">讓怪獸動起來</a><ul>
 <li><a class="reference internal" href="#id2">怪物飛行</a><ul>
-<li><a class="reference internal" href="#for-each">(檢查) For Each</a></li>
-<li><a class="reference internal" href="#id3">(動作) 更新顯示物件</a></li>
+<li><a class="reference internal" href="#for-each">(+檢查) For Each</a></li>
+<li><a class="reference internal" href="#id3">(+動作) 更新顯示物件</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id4">怪物撞戰機</a><ul>
-<li><a class="reference internal" href="#id5">(檢查) For Each</a></li>
-<li><a class="reference internal" href="#id6">(檢查) 物件重疊</a></li>
-<li><a class="reference internal" href="#id7">(動作) 建立圖層佈局</a></li>
-<li><a class="reference internal" href="#id8">(動作) 更新顯示物件</a></li>
-<li><a class="reference internal" href="#id9">(動作) 移除物件</a></li>
-<li><a class="reference internal" href="#id10">(動作) 等待</a></li>
-<li><a class="reference internal" href="#id11">(動作) 彈出確認視窗</a></li>
+<li><a class="reference internal" href="#id5">(+檢查) For Each</a></li>
+<li><a class="reference internal" href="#id6">(+檢查) 物件重疊</a></li>
+<li><a class="reference internal" href="#id7">(+動作) 建立圖層佈局</a></li>
+<li><a class="reference internal" href="#id8">(+動作) 更新顯示物件</a></li>
+<li><a class="reference internal" href="#id9">(+動作) 移除物件</a></li>
+<li><a class="reference internal" href="#id10">(+動作) 等待</a></li>
+<li><a class="reference internal" href="#id11">(+動作) 彈出確認視窗</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id12">重新一次</a><ul>
-<li><a class="reference internal" href="#id13">(觸發) 視窗關閉</a></li>
-<li><a class="reference internal" href="#id14">(觸發) 視窗關閉</a></li>
-<li><a class="reference internal" href="#id15">(動作) 執行事件表</a></li>
+<li><a class="reference internal" href="#id13">(+觸發) 視窗關閉</a></li>
+<li><a class="reference internal" href="#id14">(+觸發) 視窗關閉</a></li>
+<li><a class="reference internal" href="#id15">(+動作) 執行事件表</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id16">下一步</a></li>

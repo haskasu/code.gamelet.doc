@@ -14,9 +14,11 @@
 
 玩家按下滑鼠左鍵會朝戰機當時的方向射出飛彈，飛彈離開畫面後會自動消失，若飛行途中擊中怪獸，則飛彈和怪獸會一起消失。所有怪獸都被消滅後，遊戲結束，任務成功。
 
- 試玩成品 https://spaceshooter-zh.gamelet.online/play/v0.0.1
+.. image:: img/preview.png
+    :class: fullwidth
 
- 示範專案 https://code.gamelet.com/edit/SpaceShooter_zh
+- 試玩成品 https://spaceshooter-zh.gamelet.online/play/v0.0.1
+- 示範專案 https://code.gamelet.com/edit/SpaceShooter_zh
 
 事件編輯器
 ^^^^^^^^^^^^^^^
@@ -32,10 +34,11 @@
     .. image:: img/app_ts.png
         :class: fullwidth
 
-事件編輯器的最上端有試玩按鈕、設定按鈕、列印按鈕，右上角有「編輯原始資料(JSON)」按鈕，以下一一解釋這些按鈕的用途。
-
 .. image:: img/events_sheet_empty.png
     :class: fullwidth
+
+事件編輯器的最上端有試玩按鈕、設定按鈕、列印按鈕，右上角有「編輯原始資料(JSON)」按鈕，
+雖然這些按鈕我們暫時還用不到，不過以下還是先一一解釋這些按鈕的用途，以免同學們心底不踏實。
 
 - :btnicon:`play_arrow` 試玩按鈕: 試玩這個事件表。
 - :btnicon:`settings` 設定: 設定舞台大小、位置及預先載入的資料等設定。
@@ -47,7 +50,7 @@
 加載遊戲資源
 ^^^^^^^^^^^^^^^
 
-首先我們要利用第一個事件，將星空、戰機、怪獸放到遊戲的舞台上，在放上去之前，我們需要先把需要用到的圖案加載到我們的專案中。請按下列步驟加載這個遊戲所需要的資源。
+首先我們要利用即將建立的第一個事件，將星空、戰機、怪獸放到遊戲的舞台上。但是在放上去之前，我們必須先把需要用到的圖案加載到我們的專案中。請按下列步驟加載需要的資源。
 
 1. 網頁右邊有一列直排的選單，按下第二個按鈕 :btnicon:`photo_library` 就可以打開加載資源的面板。
 
@@ -75,14 +78,14 @@
 
 接著用同樣的方法載入以下資源：
 
-============ ======== ========= =========================
-代理名字      類別      關鍵字    資源名字
-============ ======== ========= =========================
-fighter      圖片      fighter   ezgif.com-rotate.gif
-monster      圖片      monster   fly-monster.png
-bullet       圖片      bullet    bullet.png
-explosion    GAF動畫   bulle     bullet.png
-============ ======== ========= =========================
+============ ======== =========== =========================
+代理名字      類別      關鍵字      資源名字
+============ ======== =========== =========================
+fighter      圖片      fighter     ezgif.com-rotate.gif
+monster      圖片      monster     fly-monster.png
+bullet       圖片      bullet      bullet.png
+explosion    GAF動畫   explosion   explosion
+============ ======== =========== =========================
 
 .. topic:: :icon:`camera_alt` 參考截圖
     :class: collapse

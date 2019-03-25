@@ -181,9 +181,9 @@
 <p>當一個事件被設定可以重覆執行時，我們可以設定事件的 <strong>重覆間隔</strong> ，代表事件觸發並通過檢查後，下一次事件還能再次被觸發的最快時間間隔。</p>
 <p>在這個範例中，我們設定 重覆間隔 為 150 毫秒(0.15秒)，代表玩家最快每 150 毫秒可以發射一枚飛彈。</p>
 </div>
-<p>我們將在這個事件中加入一個觸發(監聽滑鼠左鍵在被點擊時醒來檢查)，加入一個檢查(檢查戰機是否還活著)，以及三個動作: 將飛彈圖放上舞台、設定飛彈在飛出畫面外自動消失、設定飛彈的初始位置及角度。</p>
+<p>我們將在這個事件中加入一個觸發(監聽滑鼠左鍵在被點擊時醒來檢查)，加入一個檢查(+檢查戰機是否還活著)，以及三個動作: 將飛彈圖放上舞台、設定飛彈在飛出畫面外自動消失、設定飛彈的初始位置及角度。</p>
 <div class="section" id="id3">
-<h3>(觸發) 滑鼠點擊<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3>(+觸發) 滑鼠點擊<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>在 發射子彈 事件中按下 <strong>觸發</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增觸發的視窗，並從目錄中選擇 <strong>輸入</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>滑鼠點擊</strong> 。</p>
 <ul class="simple">
 <li>觸發時機: <strong>點擊滑鼠按鍵(click)</strong></li>
@@ -191,7 +191,7 @@
 </ul>
 </div>
 <div class="section" id="id4">
-<h3>(檢查) 變數是否存在<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) 變數是否存在<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>在 發射子彈 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>變數</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>變數是否存在</strong> 。</p>
 <ul class="simple">
 <li>用來尋找變數的鍵名(Key): <strong>fighter0</strong></li>
@@ -208,13 +208,13 @@
 </div>
 </div>
 <div class="section" id="id5">
-<h3>(動作) 建立圖層佈局<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 建立圖層佈局<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>當滑鼠點擊觸發後，檢查 fighter0 變數內容仍存在的情況下，發射子彈事件的動作就會被執行。第一件要做的動作是把飛彈的圖片放到舞台上。</p>
 <p>在 發射子彈 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>新增</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>建立圖層佈局</strong> ，
 父節點的物件ID填入 <strong>gameroot</strong> ，並將飛彈圖片(bullet)拉到舞台上，然後按下左上角的綠色勾勾完成。</p>
 </div>
 <div class="section" id="id6">
-<h3>(動作) 自動移除圖片<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 自動移除圖片<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>在遊戲中，玩家肯定為了擊敗怪獸會不斷發射飛彈，若舞台上的飛彈越積越多，電腦最後一定會吃不消，畫面會越變越慢，最終可能導至我們的遊戲網頁當掉或被瀏覽器強制關閉之類不好的遊戲體驗。
 <strong>自動移除圖片</strong> 的功能就是為了防止這種事情發生的便利工具，這個動作可以讓圖片在離開畫面後自動消失，保持電腦的效能。</p>
 <p>在 發射子彈 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>移除</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>自動移除圖片</strong> 。</p>
@@ -225,7 +225,7 @@
 </ul>
 </div>
 <div class="section" id="id7">
-<h3>(動作) 更新顯示物件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 更新顯示物件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>最後要把飛彈的位置放在戰機的位置上，並把角度調整至鼠標所在的方向。</p>
 <p>在 發射子彈 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> 。</p>
 <ul class="simple">
@@ -240,7 +240,7 @@
 <p>飛彈被創造出來後，接著就是要讓飛彈朝它面對的方向持特飛行，直到飛出畫面外，讓 自動移除圖片 的動作幫我們自動移除飛彈。</p>
 <p>新增一個事件ID為 子彈飛行 的事件，並設定為 <strong>無限重覆</strong> 。我們將在這個事件中加入一個檢查以及一個動作，用來控制所有飛彈們的飛行。</p>
 <div class="section" id="for-each">
-<h3>(檢查) For Each<a class="headerlink" href="#for-each" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) For Each<a class="headerlink" href="#for-each" title="永久链接至标题">¶</a></h3>
 <p>在 子彈飛行 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>迴圈</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>For Each</strong> 。
 我們要在這個For Each中找到所有名字(ID)以 bullet 作為開頭的物件，並對這些物件都執行一個 <strong>更新顯示物件</strong> 的動作，讓所有的飛彈都持續朝一個方向前進。</p>
 <ul class="simple">
@@ -249,7 +249,7 @@
 </ul>
 </div>
 <div class="section" id="id9">
-<h3>(動作) 更新顯示物件<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 更新顯示物件<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>在 子彈飛行 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> 。</p>
 <ul class="simple">
 <li>物件的ID: <strong>instance</strong></li>
@@ -275,7 +275,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 <p>在這裏，我們要做一個和 怪物撞戰機 非常類似的事件，檢查是否有其中一顆飛彈擊中其中一隻怪獸，但在這個事件中的迴圈檢查，我們將用到 <strong>雙層迴圈</strong> 。</p>
 <p>新增一個事件ID為 子彈撞怪物 的事件，並設定為 <strong>無限重覆</strong> 。</p>
 <div class="section" id="id11">
-<h3>(檢查) For Each<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) For Each<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <p>首先是第一層迴圈，用來找出所有飛彈放入迴圈中。</p>
 <p>在 子彈撞怪物 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>迴圈</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>For Each</strong> 。</p>
 <ul class="simple">
@@ -284,7 +284,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 </ul>
 </div>
 <div class="section" id="id12">
-<h3>(檢查) For Each<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) For Each<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>接著是第二層迴圈，用來找出所有怪獸放入第二層迴圈中。</p>
 <p>在 子彈撞怪物 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>迴圈</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>For Each</strong> 。</p>
 <ul class="simple">
@@ -294,7 +294,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 <p>在雙層迴圈中，每一次的迴圈都會將找到的其中一個飛彈取名為 bullet, 還有其中一隻怪獸取名為 monster ，提供事件中的動作的目標物件。</p>
 </div>
 <div class="section" id="id13">
-<h3>(檢查) 物件重疊<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) 物件重疊<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>在 子彈撞怪物 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>物件重疊</strong> 。</p>
 <ul class="simple">
 <li>顯示物件的ID: <strong>bullet</strong></li>
@@ -306,7 +306,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 <p>參考上圖可以發現，物件重疊是在雙層迴圈之內，所以可以調用迴圈給飛彈和怪物暫時取的小名 bullet 和 monster 。</p>
 </div>
 <div class="section" id="id14">
-<h3>(動作) 建立圖層佈局<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 建立圖層佈局<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <p>在 子彈撞怪物 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>新增</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>建立圖層佈局</strong> ，
 用來加入爆炸的特效。</p>
 <ul class="simple">
@@ -320,7 +320,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 </ul>
 </div>
 <div class="section" id="id15">
-<h3>(動作) 更新顯示物件<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 更新顯示物件<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>剛剛加入的爆炸特效要移動到怪獸的位置。
 在 子彈撞怪物 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> 。</p>
 <ul class="simple">
@@ -329,7 +329,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 </ul>
 </div>
 <div class="section" id="id16">
-<h3>(動作) 移除物件<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 移除物件<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>將飛彈從舞台上移除。
 在 子彈撞怪物 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>移除</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>移除物件</strong> 。</p>
 <ul class="simple">
@@ -337,7 +337,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 </ul>
 </div>
 <div class="section" id="id17">
-<h3>(動作) 移除物件<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 移除物件<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
 <p>將怪獸從舞台上移除。
 在 子彈撞怪物 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>移除</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>移除物件</strong> 。</p>
 <ul class="simple">
@@ -352,7 +352,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 <p>在這個事件中，我們會在每次 子彈撞怪物 事件發生後(代表有怪獸被消滅的時候)，檢查如果全部的怪獸都消失後，要彈出一個任務完成的視窗。</p>
 <p>新增一個事件ID為 怪物全死光 的事件，這個事件不需要重覆(重覆次數0)。</p>
 <div class="section" id="id19">
-<h3>(觸發) 事件觸發後<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<h3>(+觸發) 事件觸發後<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <p>在 怪物全死光 事件中按下 <strong>觸發</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增觸發的視窗，並從目錄中選擇 <strong>事件</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>事件觸發後</strong> 。</p>
 <ul class="simple">
 <li>事件的ID: <strong>子彈撞怪物</strong></li>
@@ -360,7 +360,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 </ul>
 </div>
 <div class="section" id="id20">
-<h3>(檢查) 變數是否存在<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<h3>(+檢查) 變數是否存在<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <p>在 發射子彈 事件中按下 <strong>檢查</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增檢查的視窗，並從目錄中選擇 <strong>變數</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>變數是否存在</strong> 。</p>
 <ul class="simple">
 <li>用來尋找變數的鍵名(Key): <strong>monster*</strong></li>
@@ -372,7 +372,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 </div>
 </div>
 <div class="section" id="id21">
-<h3>(動作) 彈出確認視窗<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<h3>(+動作) 彈出確認視窗<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <p>彈出顯示任務完成遊戲結束的視窗。
 在 怪物撞戰機 事件中按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> 開啟新增動作的視窗，並從目錄中選擇 <strong>彈出視窗</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>彈出確認視窗</strong> 。</p>
 <ul class="simple">
@@ -389,7 +389,7 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
 <p>恭喜完成了你在CG的第一個遊戲！
 你可以試玩看看，改改事件中的參數，或試試在製作過程中偷瞄到的各種功能。</p>
 <div class="collapse topic">
-<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 完整事件參考截圖</p>
+<p class="topic-title first"><span class="material-icons mat-icon">camera_alt</span> 完整事件表參考截圖</p>
 <img alt="../../_images/events_full_done.zh.png" class="fullwidth" src="../../_images/events_full_done.zh.png" />
 </div>
 <ul class="simple">
@@ -414,32 +414,32 @@ this.rotationDeg 翻譯成中文就是像這樣</p>
     <ul>
 <li><a class="reference internal" href="#">發射飛彈</a><ul>
 <li><a class="reference internal" href="#id2">發射子彈</a><ul>
-<li><a class="reference internal" href="#id3">(觸發) 滑鼠點擊</a></li>
-<li><a class="reference internal" href="#id4">(檢查) 變數是否存在</a></li>
-<li><a class="reference internal" href="#id5">(動作) 建立圖層佈局</a></li>
-<li><a class="reference internal" href="#id6">(動作) 自動移除圖片</a></li>
-<li><a class="reference internal" href="#id7">(動作) 更新顯示物件</a></li>
+<li><a class="reference internal" href="#id3">(+觸發) 滑鼠點擊</a></li>
+<li><a class="reference internal" href="#id4">(+檢查) 變數是否存在</a></li>
+<li><a class="reference internal" href="#id5">(+動作) 建立圖層佈局</a></li>
+<li><a class="reference internal" href="#id6">(+動作) 自動移除圖片</a></li>
+<li><a class="reference internal" href="#id7">(+動作) 更新顯示物件</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id8">子彈飛行</a><ul>
-<li><a class="reference internal" href="#for-each">(檢查) For Each</a></li>
-<li><a class="reference internal" href="#id9">(動作) 更新顯示物件</a></li>
+<li><a class="reference internal" href="#for-each">(+檢查) For Each</a></li>
+<li><a class="reference internal" href="#id9">(+動作) 更新顯示物件</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id10">子彈撞怪物</a><ul>
-<li><a class="reference internal" href="#id11">(檢查) For Each</a></li>
-<li><a class="reference internal" href="#id12">(檢查) For Each</a></li>
-<li><a class="reference internal" href="#id13">(檢查) 物件重疊</a></li>
-<li><a class="reference internal" href="#id14">(動作) 建立圖層佈局</a></li>
-<li><a class="reference internal" href="#id15">(動作) 更新顯示物件</a></li>
-<li><a class="reference internal" href="#id16">(動作) 移除物件</a></li>
-<li><a class="reference internal" href="#id17">(動作) 移除物件</a></li>
+<li><a class="reference internal" href="#id11">(+檢查) For Each</a></li>
+<li><a class="reference internal" href="#id12">(+檢查) For Each</a></li>
+<li><a class="reference internal" href="#id13">(+檢查) 物件重疊</a></li>
+<li><a class="reference internal" href="#id14">(+動作) 建立圖層佈局</a></li>
+<li><a class="reference internal" href="#id15">(+動作) 更新顯示物件</a></li>
+<li><a class="reference internal" href="#id16">(+動作) 移除物件</a></li>
+<li><a class="reference internal" href="#id17">(+動作) 移除物件</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id18">怪物全死光</a><ul>
-<li><a class="reference internal" href="#id19">(觸發) 事件觸發後</a></li>
-<li><a class="reference internal" href="#id20">(檢查) 變數是否存在</a></li>
-<li><a class="reference internal" href="#id21">(動作) 彈出確認視窗</a></li>
+<li><a class="reference internal" href="#id19">(+觸發) 事件觸發後</a></li>
+<li><a class="reference internal" href="#id20">(+檢查) 變數是否存在</a></li>
+<li><a class="reference internal" href="#id21">(+動作) 彈出確認視窗</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id22">製作完成</a></li>

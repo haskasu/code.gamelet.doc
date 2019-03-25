@@ -172,10 +172,11 @@
 <p>我們要做的是「太空戰機」，玩家控制一台太空戰機，在宇宙中消滅太空怪獸，遊戲畫面採上視視角，也就是從舞台正上方往下看的視角。</p>
 <p>太空怪獸會自動往玩家靠攏，碰到玩家的戰機時戰機爆炸，遊戲結束，任務失敗。</p>
 <p>玩家按下滑鼠左鍵會朝戰機當時的方向射出飛彈，飛彈離開畫面後會自動消失，若飛行途中擊中怪獸，則飛彈和怪獸會一起消失。所有怪獸都被消滅後，遊戲結束，任務成功。</p>
-<blockquote>
-<div><p>試玩成品 <a class="reference external" href="https://spaceshooter-zh.gamelet.online/play/v0.0.1">https://spaceshooter-zh.gamelet.online/play/v0.0.1</a></p>
-<p>示範專案 <a class="reference external" href="https://code.gamelet.com/edit/SpaceShooter_zh">https://code.gamelet.com/edit/SpaceShooter_zh</a></p>
-</div></blockquote>
+<img alt="../../_images/preview.zh.png" class="fullwidth" src="../../_images/preview.zh.png" />
+<ul class="simple">
+<li>試玩成品 <a class="reference external" href="https://spaceshooter-zh.gamelet.online/play/v0.0.1">https://spaceshooter-zh.gamelet.online/play/v0.0.1</a></li>
+<li>示範專案 <a class="reference external" href="https://code.gamelet.com/edit/SpaceShooter_zh">https://code.gamelet.com/edit/SpaceShooter_zh</a></li>
+</ul>
 </div>
 <div class="section" id="id3">
 <h2>事件編輯器<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
@@ -185,8 +186,9 @@
 <p>新創專案中預設第一個被執行的事件表是 game.events ，在檔案總管中打開 app.ts 就可以看出程式第一個載入的事件表是哪個。</p>
 <img alt="../../_images/app_ts.zh.png" class="fullwidth" src="../../_images/app_ts.zh.png" />
 </div>
-<p>事件編輯器的最上端有試玩按鈕、設定按鈕、列印按鈕，右上角有「編輯原始資料(JSON)」按鈕，以下一一解釋這些按鈕的用途。</p>
 <img alt="../../_images/events_sheet_empty.zh.png" class="fullwidth" src="../../_images/events_sheet_empty.zh.png" />
+<p>事件編輯器的最上端有試玩按鈕、設定按鈕、列印按鈕，右上角有「編輯原始資料(JSON)」按鈕，
+雖然這些按鈕我們暫時還用不到，不過以下還是先一一解釋這些按鈕的用途，以免同學們心底不踏實。</p>
 <ul class="simple">
 <li><span class="material-icons mat-icon btn-icon">play_arrow</span> 試玩按鈕: 試玩這個事件表。</li>
 <li><span class="material-icons mat-icon btn-icon">settings</span> 設定: 設定舞台大小、位置及預先載入的資料等設定。</li>
@@ -197,7 +199,7 @@
 </div>
 <div class="section" id="id4">
 <h2>加載遊戲資源<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>首先我們要利用第一個事件，將星空、戰機、怪獸放到遊戲的舞台上，在放上去之前，我們需要先把需要用到的圖案加載到我們的專案中。請按下列步驟加載這個遊戲所需要的資源。</p>
+<p>首先我們要利用即將建立的第一個事件，將星空、戰機、怪獸放到遊戲的舞台上。但是在放上去之前，我們必須先把需要用到的圖案加載到我們的專案中。請按下列步驟加載需要的資源。</p>
 <ol class="arabic simple">
 <li>網頁右邊有一列直排的選單，按下第二個按鈕 <span class="material-icons mat-icon btn-icon">photo_library</span> 就可以打開加載資源的面板。</li>
 </ol>
@@ -220,10 +222,10 @@
 <p>接著用同樣的方法載入以下資源：</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="22%" />
-<col width="15%" />
-<col width="17%" />
-<col width="46%" />
+<col width="21%" />
+<col width="14%" />
+<col width="20%" />
+<col width="45%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">代理名字</th>
@@ -250,8 +252,8 @@
 </tr>
 <tr class="row-odd"><td>explosion</td>
 <td>GAF動畫</td>
-<td>bulle</td>
-<td>bullet.png</td>
+<td>explosion</td>
+<td>explosion</td>
 </tr>
 </tbody>
 </table>
