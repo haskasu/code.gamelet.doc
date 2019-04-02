@@ -270,9 +270,21 @@
 <p>因為我們想要讓這個事件在遊戲一開始就立刻執行，所以我們不加觸發也不加檢查，只加入初始化需要的動作。按下 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span>
 開啟增加動作視窗，並從目錄中選擇 <strong>新增</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>建立圖層佈局</strong> ，
 打開 建立圖層佈局 的視窗後，依下列步驟將星空、戰機、怪獸放到遊戲的舞台上。</p>
+<ul class="simple">
+<li>在圖層的ID填入 <strong>gameroot</strong></li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 父節點的物件ID 與 圖層的ID</p>
+<p>同學可以把舞台想像成一張很大的桌子，當我們把圖片放在舞台上，就好比是放在這張大桌子上。
+然後我們可以在舞台上隨意移動、旋轉這些圖片。</p>
+<p>但是有時候，我們想要把一些圖片分在同一組，移動時一起移動，旋轉時一起旋轉，例如我們在舞台上放上頭、身體、手、腳的圖片拼成一個角色，
+當我們想移動這個角色時，雖然也可以分別移動身體的各個部分，但是這樣似乎不太方便，這時我們就可以藉助圖層讓身體的各部位都放在同一個圖層一起移動。</p>
+<p>我們可以把圖層想像成一個透明的玻璃板，先把頭、身體、手、腳都放在這個玻璃圖層，再把這片玻璃放在大桌子舞台。
+這時，我們仍然可以將身體各部位分別移動，做出各種動作，但同時我們也可以移動這個玻璃圖層，將整個角色平移。
+我們甚至也可以在一片玻璃圖層上再放上另一片玻璃圖層，藉此管理所有圖片的層級關係。</p>
+<p>如果不填 父節點的物件ID 就是默認我們要將圖片直接放在這張大桌子舞台上。而指定父節點就是指定我們要將圖片放在哪個玻璃圖層上。</p>
+</div>
 <ul>
-<li><p class="first">在圖層的ID填入 <strong>gameroot</strong></p>
-</li>
 <li><p class="first">參考下圖將顯示面板中的資源圖拉到舞台上放好</p>
 <ol class="arabic simple">
 <li>先放 background (星空背景)</li>
