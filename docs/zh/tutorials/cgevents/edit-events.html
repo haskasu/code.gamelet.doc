@@ -180,10 +180,11 @@
 </div>
 <div class="section" id="id3">
 <h2>事件編輯器<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>從前面 <a class="reference internal" href="index.html#tutorials-cgevents"><span class="std std-ref">CG同人陣製作示範教學</span></a> 新創專案中的 README.md 這個檔案中點擊「編輯遊戲事件表」即可快速在開啟事件編輯器編輯 game.events 。</p>
+<p>在前面 <a class="reference internal" href="index.html#tutorials-cgevents"><span class="std std-ref">CG同人陣製作示範教學</span></a> 新創專案中提到的 README.md 這個檔案，內有一個「編輯遊戲事件表」的按鈕，點擊後即可快速開啟事件編輯器編輯 game.events 。</p>
 <div class="collapse topic">
 <p class="topic-title first"><span class="material-icons mat-icon">info</span> 為什麼是 game.events ?</p>
-<p>新創專案中預設第一個被執行的事件表是 game.events ，在檔案總管中打開 app.ts 就可以看出程式第一個載入的事件表是哪個。</p>
+<p>新創專案中預設第一個被執行的事件表是 game.events ，在檔案總管中打開 app.ts 就可以看出程式第一個載入的事件表是哪個。
+但是暫時不想管程式碼的我們，就先不用理會這些細節。</p>
 <img alt="../../_images/app_ts.zh.png" class="fullwidth" src="../../_images/app_ts.zh.png" />
 </div>
 <img alt="../../_images/events_sheet_empty.zh.png" class="fullwidth" src="../../_images/events_sheet_empty.zh.png" />
@@ -299,18 +300,32 @@
 <li>攝影機舞台ID: <strong>gameroot</strong></li>
 <li>焦點物件ID: <strong>fighter0</strong></li>
 </ul>
-<p>然就按下視窗左上角的綠色勾勾，如此就完成了擁有兩個動作的初始化事件。</p>
+<p>然後按下視窗左上角的綠色勾勾，如此就完成了擁有兩個動作的初始化事件。</p>
 </div>
 <div class="section" id="id7">
 <h2>太空戰機! 前進!<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>接下來我們要新增第二個事件，用來讓太空戰機在宇宙中飛行。這個事件也是不需要觸發與檢查，要讓這個事件在一開始就啟動。</p>
-<p>點擊預設事件匣中的 <span class="material-icons mat-icon btn-icon">add</span> <strong>事件</strong> 開啟新增事件視窗，並在事件ID中填入 <strong>戰機飛行</strong> ，接著在 <strong>重覆次數</strong> 中選擇 -1 無限重覆，再按視窗左上角的的綠色勾勾完成。</p>
 <p>和初始化事件不同的是，我們在這個事件中會加入一個動作讓戰機往前移動一小段距離，這個動作可不能只做一次，我們需要這個事件每一小段時間就重覆執行一次來達到飛行的效果。</p>
+<p>點擊預設事件匣中的 <span class="material-icons mat-icon btn-icon">add</span> <strong>事件</strong> 開啟新增事件視窗，並在事件ID中填入 <strong>戰機飛行</strong> ，接著在 <strong>重覆次數</strong> 中選擇 -1 無限重覆，再按視窗左上角的的綠色勾勾完成。</p>
 <p>接著點擊 戰機飛行 事件中的 <strong>動作</strong> <span class="material-icons mat-icon btn-icon">add</span> ，從目錄中選擇 <strong>更新</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>顯示</strong> <span class="material-icons mat-icon">chevron_right</span> <strong>更新顯示物件</strong> ，
 依下列步驟設定更新物件的內容:</p>
 <ul class="simple">
 <li>物件的ID: <strong>fighter0</strong></li>
 <li>勾選 <strong>設定位置</strong> ，設定方式選擇 <strong>朝一個方向移動</strong> ，距離填入 <strong>2</strong></li>
+</ul>
+<div class="topic">
+<p class="topic-title first"><span class="material-icons mat-icon">info</span> 方向 <strong>{this.rotationDeg}</strong> ?</p>
+<p>這個動作中的 <strong>方向</strong> 參數，決定了要朝哪個方向前進，這個欄位需要輸入一個角度(0 ~ 360)，但這裏預設填入的 {this.rotationDeg} 是什麼意思呢？</p>
+<p>首先 {...} 這一對大括號，是光暈同人陣延續到CG同人陣的語法，用來告訴電腦，我們現在要輸入的角度不是一個靜態的數字，而是一個需要翻譯並尋找的數字，
+this.rotationDeg 翻譯成中文就是像這樣</p>
+<ul class="simple">
+<li><strong>this</strong> 這個動作的目標物件，也就是太空戰機</li>
+<li><strong>.</strong> 的(介繫詞)</li>
+<li><strong>rotationDeg</strong> 以角度(degree)為單位的方向</li>
+</ul>
+<p>所以 {this.rotationDeg} 整個翻譯下來的意思，就是 這個動作中的主角(太空戰機)目前面向的角度。</p>
+</div>
+<ul class="simple">
 <li>勾選 <strong>設定旋轉角度</strong> ，設定方式選擇 <strong>轉向鼠標</strong></li>
 <li>點擊視窗左上角的綠色勾勾完成</li>
 </ul>

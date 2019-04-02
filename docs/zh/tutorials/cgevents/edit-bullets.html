@@ -255,18 +255,6 @@
 <li>物件的ID: <strong>instance</strong></li>
 <li>勾選 <strong>設定位置</strong> ，設定方式選擇 <strong>朝一個方向移動</strong> ，距離填入 <strong>10</strong></li>
 </ul>
-<div class="topic">
-<p class="topic-title first"><span class="material-icons mat-icon">info</span> 方向 <strong>{this.rotationDeg}</strong> ?</p>
-<p>這個動作中的 <strong>方向</strong> 參數，決定了要讓飛彈朝哪個方向前進，這個欄位需要輸入一個角度(0 ~ 360)，但這裏預設填入的 {this.rotationDeg} 是什麼意思呢？</p>
-<p>首先 {...} 這一對大括號，是光暈同人陣延續到CG同人陣的語法，用來告訴電腦，我們現在要輸入的角度不是一個靜態的數字，而是一個需要翻譯並尋找的數字，
-this.rotationDeg 翻譯成中文就是像這樣</p>
-<ul class="simple">
-<li><strong>this</strong> 這個動作的目標物件</li>
-<li><strong>.</strong> 的(介繫詞)</li>
-<li><strong>rotationDeg</strong> 以角度(degree)為單位的方向</li>
-</ul>
-<p>所以 {this.rotationDeg} 整個翻譯下來的意思，就是 這個動作中的飛彈目前面向的角度。</p>
-</div>
 <p>完成這個事件後，可以試玩一下，遊戲在這個階段就可以爽快的連續發射飛彈了。</p>
 </div>
 </div>

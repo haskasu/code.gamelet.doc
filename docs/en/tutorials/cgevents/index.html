@@ -185,7 +185,7 @@
 在新增一個空白專案中點擊「新增一個空白專案」，輸入專案代碼後點擊「新創專案」。</p>
 <div class="topic">
 <p class="topic-title first"><span class="material-icons mat-icon">priority_high</span> 專案代碼</p>
-<p>專案代碼是CG用來識別專案的代碼，必須是獨一無二的。這個專案代碼是也會用來組成CG送給專案的網址，例如專案的代碼若是 Cool_Shooting_Game，
+<p>專案代碼是CG用來識別專案的代碼，必須是獨一無二的。這個專案代碼也會被用來組成CG提供給專案專屬的網址，例如專案的代碼若是 Cool_Shooting_Game，
 那麼未來這個專案有了成品後，玩家們就可以在 <cite>https://cool-shooting-game.gamelet.online</cite> 上遊玩這個專案的成品。</p>
 </div>
 <img alt="tutorials\cgevents\img/create_project.png" class="fullwidth" src="tutorials\cgevents\img/create_project.png" />
@@ -208,7 +208,7 @@ CG同人陣讓製作遊戲不再需要寫程式，透過安排事件情節的方
 <p>利用CG上的事件表編輯器，設定各種事件讓遊戲在各種情節中挑選設計好的流程執行各項指令。你只要設計好事件表，之後就交給 <strong>CgEventsLib</strong> 幫你將指令轉換為程式碼。</p>
 <div class="section" id="cgeventslib">
 <h3>認識CgEventsLib<a class="headerlink" href="#cgeventslib" title="Permalink to this headline">¶</a></h3>
-<p>CgEventsLib是以事件表為資料來源的應用程式引擎，在應用程式執行時載入一個 <strong>.events</strong> 檔案(即事件表)後，CgEventsLib就會依照事件表的安排，依照情節執行各種指令。</p>
+<p>CgEventsLib是以事件表為資料來源的應用程式引擎，在應用程式執行時載入一個 <strong>.events</strong> 檔案(即事件表)後，CgEventsLib就會按事件表的安排，依情節執行各種指令。</p>
 <div class="topic">
 <p class="topic-title first"><span class="material-icons mat-icon">info</span> game.events</p>
 <p>CgEventsLib是一個遊戲引擎，他的核心是另一個函式庫 <strong>CgEventsEngine</strong> ，CgEventsLib依照CgEventsEngine所製訂的格式，提供遊戲製作常用的指令集，例如將圖片放到舞台上、播放聲音、移動物件等。
@@ -225,7 +225,7 @@ CG中還有其他的遊戲引擎也使用了CgEventsEngine並提供不同種類�
 </ul>
 <div class="topic">
 <p class="topic-title first"><span class="material-icons mat-icon">info</span> 在這邊舉一個簡單的例子讓大家更容易瞭解事件運作的實際情況</p>
-<p>如果在遊戲中有一台飛機，我們想讓玩家按下滑鼠左鍵時，讓飛機發射子彈。
+<p>如果在遊戲中有一台飛機，我們想在玩家按下滑鼠左鍵時，讓飛機發射子彈。
 這個情節轉換成CG同人陣的事件後，就會像下面這樣：</p>
 <dl class="docutils">
 <dt>觸發</dt>
