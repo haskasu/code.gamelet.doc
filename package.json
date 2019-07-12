@@ -29,5 +29,8 @@
     "gulp-replace": "^1.0.0",
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.14"
   }
 }
