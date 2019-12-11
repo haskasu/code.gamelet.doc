@@ -1,9 +1,6 @@
 var gulp = require("gulp");
-var gutil = require("gulp-util");
-var ftp = require("vinyl-ftp");
 var replace = require("gulp-replace");
 var rename = require("gulp-rename");
-var prompt = require("gulp-prompt");
 var clean = require("gulp-clean");
 var spawn = require("child_process").spawn;
 const fs = require("fs");
@@ -13,36 +10,9 @@ var minify = require("gulp-minify");
 let cleanCSS = require('gulp-clean-css');
 var open = require('gulp-open');
 
-let serverJson = JSON.parse(fs.readFileSync("server.json", "utf8"));
 let locale_zh = { code: "zh", label: "繁體中文" };
 let locale_en = { code: "en", label: "English" };
 let locales_all = [locale_en, locale_zh];
-
-function initLocalEnv() {
-  local = true;
-}
-
-function ftpLog(message, params) {
-  if (message.indexOf("UP ") == 0) {
-    gutil.log(message, params);
-  }
-}
-function getServerConnection() {
-  return targetServer == "Release"
-    ? getPubServerConnection()
-    : getDevServerConnection();
-}
-function getPubServerConnection() {
-  return ftp.create(
-    Object.assign(
-      {
-        parallel: 6,
-        log: ftpLog
-      },
-      serverJson
-    )
-  );
-}
 
 function cleanFolder(paths) {
   return new Promise((resolve, reject) => {
