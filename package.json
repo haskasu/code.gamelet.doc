@@ -31,6 +31,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "lodash": "^4.17.14"
+    "lodash": "^4.17.15",
+    "lodash.template": ">=4.5.0"
   }
 }
