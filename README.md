@@ -12,11 +12,12 @@ https://haskasu.github.io/code.gamelet.doc
 
 ## Commands
 
-make gettext
-sphinx-intl update -p build/gettext
-sphinx-intl build
-make -e SPHINXOPTS="-D language='zh'" html
+* make gettext
+* sphinx-intl update -p build/gettext
+* sphinx-intl build
+* make -e SPHINXOPTS="-D language='zh'" html
 
 ## Gulp Tasks
-gulp build
-gulp intl
+* **gulp build** *build the site*
+* **gulp intl** *build translations*
+* **gulp open** *open local homepage of the build*
