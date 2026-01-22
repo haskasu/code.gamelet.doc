@@ -7,7 +7,7 @@ https://haskasu.github.io/code.gamelet.doc
 * install python3
 * add path to python\python37\Scripts
 * pip install -U sphinx
-* easy_install sphinx-intl
+* pip install sphinx-intl
 * pip install sphinx_materialdesign_theme
 
 ## Commands
